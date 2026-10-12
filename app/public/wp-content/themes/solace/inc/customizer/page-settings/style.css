@@ -1,0 +1,53 @@
+li#customize-control-solace_blog_layout_custom_columns,
+li#customize-control-solace_blog_layout_custom_posts {
+    background: transparent !important;
+}
+
+.container-btn-plus-minus {
+    /* display: none; */
+}
+
+.container-btn-plus-minus label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.container-btn-plus-minus .qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: #fff;
+    width: 120px;
+    border-radius: 20px;
+}
+
+.container-btn-plus-minus .qty span {
+    font-weight: 900;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.container-btn-plus-minus .qty span.minus {
+    position: relative;
+    left: 6px;
+    color: #001944;
+}
+
+.container-btn-plus-minus .qty span.plus {
+    position: relative;
+    right: 6px;
+    color: #001944;
+}
+
+.container-btn-plus-minus .qty input {
+    color: #001944;
+    border: none;
+    margin: 0 10px;
+    text-align: right;
+}

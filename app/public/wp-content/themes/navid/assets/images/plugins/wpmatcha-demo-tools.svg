@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <linearGradient id="demoToolsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <filter id="toolsShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect width="256" height="256" rx="56" fill="url(#demoToolsBg)"/>
+
+  <!-- Subtle Inner Border -->
+  <rect x="4" y="4" width="248" height="248" rx="52" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.2"/>
+
+  <!-- Screen Frame & Toolkit Controls -->
+  <g filter="url(#toolsShadow)">
+    <!-- Monitor / Showcase Frame -->
+    <rect x="48" y="58" width="160" height="108" rx="14" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="8"/>
+    
+    <!-- Top Demo Switcher Bar -->
+    <line x1="48" y1="86" x2="208" y2="86" stroke="#ffffff" stroke-width="6" stroke-opacity="0.6"/>
+    <circle cx="68" cy="72" r="5" fill="#f87171"/>
+    <circle cx="84" cy="72" r="5" fill="#fbbf24"/>
+    <circle cx="100" cy="72" r="5" fill="#34d399"/>
+
+    <!-- Desktop Stand Base -->
+    <path d="M 112 170 L 112 192 L 94 198 L 162 198 L 144 192 L 144 170" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Interactive Toggle Switcher Slider Accent in Center Screen -->
+    <rect x="76" y="110" width="60" height="28" rx="14" fill="#a5b4fc"/>
+    <circle cx="122" cy="124" r="10" fill="#ffffff"/>
+
+    <!-- Wand / Styling Pen Accent Floating on Top Right -->
+    <path d="M 166 112 L 186 92 A 6 6 0 0 1 194 100 L 174 120 Z" fill="#ffffff"/>
+    <circle cx="188" cy="98" r="14" fill="none" stroke="#e0e7ff" stroke-width="3" stroke-dasharray="3 3"/>
+  </g>
+</svg>

@@ -1,0 +1,286 @@
+/*User stick note*/
+.control-section-formula-plugin-section .accordion-section-title .button {
+	margin-top: -4px;
+	font-weight: 700;
+	margin-left: 8px;
+	background: #fff;
+	color: #061018;
+	border-color: #fff;
+	padding: 0 20px 1px;
+}
+
+.control-section-formula-plugin-section .accordion-section-title .button:hover,
+.control-section-formula-plugin-section .accordion-section-title .button:focus {
+	background: #fff;
+	border-color: #fff;
+}
+
+#customize-controls .control-section-formula-plugin-section.cannot-expand .accordion-section-title,
+#customize-controls .control-section-formula-plugin-section.cannot-expand:hover .accordion-section-title {
+	background: #0085ba;
+	color: #fff;
+}
+
+.customize-control-formula-toggle .screen-reader-text {
+	visibility: hidden;
+}
+
+/* ============================
+   About Theme Section Tab (Header Bar)
+   ============================ */
+li#accordion-section-upgrade_premium .accordion-section-title {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+	color: #fff !important;
+	border-left: none !important;
+	font-weight: 600;
+}
+
+li#accordion-section-upgrade_premium .accordion-section-title:hover,
+li#accordion-section-upgrade_premium .accordion-section-title:focus {
+	background: linear-gradient(135deg, #5a5de8 0%, #6a429a 100%) !important;
+	color: #fff !important;
+}
+
+li#accordion-section-upgrade_premium .accordion-section-title:after {
+	color: #fff !important;
+}
+
+/* ============================
+   About Theme Section Content
+   ============================ */
+
+.formula-customizer-about {
+	padding: 0;
+}
+
+/* Hero Section */
+.formula-about-hero {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+}
+
+.formula-about-hero::before {
+	content: '';
+	position: absolute;
+	top: -40%;
+	right: -30%;
+	width: 70%;
+	height: 180%;
+	background: rgba(255, 255, 255, 0.08);
+	transform: rotate(20deg);
+	pointer-events: none;
+}
+
+.formula-about-hero h3 {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0 0 5px 0;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+	position: relative;
+	z-index: 1;
+}
+
+.formula-about-hero p {
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 13px;
+	margin: 0;
+	line-height: 1.4;
+	position: relative;
+	z-index: 1;
+}
+
+/* Features Grid */
+.formula-pro-features-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 8px;
+	margin-bottom: 15px;
+}
+
+.formula-pro-feature {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+}
+
+.formula-pro-feature:hover {
+	background: #f1f5f9;
+	border-color: #cbd5e1;
+}
+
+.formula-pro-feature>.dashicons {
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+	color: #6366f1;
+	margin-bottom: 5px;
+}
+
+.formula-pro-feature strong {
+	font-size: 11.5px;
+	font-weight: 700;
+	color: #1e293b;
+	line-height: 1.3;
+	margin-bottom: 2px;
+}
+
+.formula-pro-feature>span:last-child {
+	font-size: 10.5px;
+	color: #64748b;
+	line-height: 1.3;
+}
+
+/* Action Buttons */
+.formula-about-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.formula-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 12px 16px;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	line-height: 1;
+}
+
+.formula-btn .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+/* Upgrade Button (Gold/Yellow) */
+.formula-btn-upgrade {
+	background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+	color: #92400e;
+	box-shadow: 0 4px 12px rgba(252, 211, 77, 0.4);
+}
+
+.formula-btn-upgrade:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 18px rgba(252, 211, 77, 0.5);
+	color: #78350f;
+}
+
+/* Secondary Button (Purple Gradient) */
+.formula-btn-secondary {
+	background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+	color: #fff;
+	box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.formula-btn-secondary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
+	color: #fff;
+}
+
+/* Sync Button (Pink/Accent) */
+.formula-btn-sync,
+#formula-sync-btn {
+	background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+	color: #fff;
+	box-shadow: 0 4px 12px rgba(236, 72, 153, 0.35);
+}
+
+.formula-btn-sync:hover,
+#formula-sync-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 18px rgba(236, 72, 153, 0.4);
+	color: #fff;
+}
+
+#formula-sync-btn.disabled {
+	background: #e2e8f0;
+	color: #94a3b8;
+	pointer-events: none;
+	box-shadow: none;
+	transform: none;
+}
+
+/* Sync Hint Text */
+.formula-sync-hint {
+	display: flex;
+	align-items: flex-start;
+	gap: 6px;
+	margin: 0;
+	padding: 10px 12px;
+	font-size: 11.5px;
+	line-height: 1.5;
+	color: #64748b;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+}
+
+.formula-sync-hint .dashicons {
+	font-size: 14px;
+	width: 14px;
+	height: 14px;
+	color: #6366f1;
+	flex-shrink: 0;
+	margin-top: 1px;
+}
+
+/* Quick Links */
+.formula-about-links {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding-top: 12px;
+	border-top: 1px solid #e2e8f0;
+}
+
+.formula-about-links a {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #64748b;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.formula-about-links a .dashicons {
+	font-size: 14px;
+	width: 14px;
+	height: 14px;
+}
+
+.formula-about-links a:hover {
+	color: #6366f1;
+}
+
+/* ============================
+   Legacy Styles (Fallback)
+   ============================ */
+.pro_info ul {
+	margin: 0;
+	padding: 0;
+}
+
+.pro_info ul li {
+	margin-bottom: 10px;
+}

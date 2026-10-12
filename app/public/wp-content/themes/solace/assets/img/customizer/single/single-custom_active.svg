@@ -1,0 +1,24 @@
+<svg width="149" height="153" viewBox="0 0 149 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_431_2)">
+<path d="M139 0H10C4.47715 0 0 4.47715 0 10V143C0 148.523 4.47715 153 10 153H139C144.523 153 149 148.523 149 143V10C149 4.47715 144.523 0 139 0Z" fill="#FF9500"/>
+<path d="M125 98H25V101H125V98Z" fill="#F5F5F5"/>
+<path d="M125 104H25V107H125V104Z" fill="#F5F5F5"/>
+<path d="M125 110H25V113H125V110Z" fill="#F5F5F5"/>
+<path d="M125 116H25V119H125V116Z" fill="#F5F5F5"/>
+<path d="M125 122H25V125H125V122Z" fill="#F5F5F5"/>
+<path d="M125 128H25V131H125V128Z" fill="#F5F5F5"/>
+<path d="M125 134H25V137H125V134Z" fill="#F5F5F5"/>
+<path d="M125 140H25V143H125V140Z" fill="#F5F5F5"/>
+<path d="M136 23H16V75H136V23Z" fill="#F5F5F5"/>
+<path d="M55 90H25V93H55V90Z" fill="#F5F5F5"/>
+<path d="M91 90H61V93H91V90Z" fill="#F5F5F5"/>
+<path d="M90 78H60V81H90V78Z" fill="#F5F5F5"/>
+<path d="M126 90H96V93H126V90Z" fill="#F5F5F5"/>
+<path d="M125 84H25V87H125V84Z" fill="#F5F5F5"/>
+</g>
+<defs>
+<clipPath id="clip0_431_2">
+<rect width="149" height="153" fill="white"/>
+</clipPath>
+</defs>
+</svg>

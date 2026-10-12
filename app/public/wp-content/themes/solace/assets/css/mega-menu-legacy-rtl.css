@@ -1,0 +1,208 @@
+/* Style mega-menu and its children on mobile */
+.nav-ul > .solace-mega-menu > .sub-menu {
+  cursor: default;
+}
+
+.nav-ul > .solace-mega-menu .sub-menu .sub-menu {
+  max-height: none;
+}
+
+.nav-ul > .solace-mega-menu .solace-mm-col {
+  text-align: right;
+  cursor: default;
+  flex: 1;
+}
+
+.nav-ul > .solace-mega-menu .solace-mm-col .sub-menu {
+  border: none;
+  padding-right: 0;
+}
+
+.nav-ul > .solace-mega-menu .solace-mm-col .sub-menu .sub-menu {
+  right: 0;
+  top: 100%;
+}
+
+.nav-ul > .solace-mega-menu a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-ul > .solace-mega-menu a i {
+  margin-top: 0;
+  vertical-align: unset;
+}
+
+.nav-ul > .solace-mega-menu li.solace-mm-divider {
+  height: 1px;
+  margin: 10px auto;
+  width: 100%;
+  background-color: currentColor !important;
+  padding: 0;
+  cursor: default;
+}
+
+.nav-ul > .solace-mega-menu .solace-mm-description {
+  text-align: right;
+  justify-content: flex-start;
+}
+
+.nav-ul > .solace-mega-menu .solace-mm-heading > span {
+  padding: 7px 14px;
+  display: flex;
+  height: 100%;
+  cursor: default;
+  align-items: center;
+}
+
+.nav-ul > .solace-mega-menu .solace-mm-heading > span i {
+  margin-left: 10px;
+}
+
+.solace-mm-description {
+  font-size: .8em;
+  padding: 0 0 7px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.solace-mm-heading > span, .solace-mm-heading > a {
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  white-space: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.solace-mm-heading i {
+  margin-left: 10px;
+}
+
+.header-menu-sidebar-inner .sub-menu, .header-menu-sidebar-inner .sub-menu li {
+  background-color: transparent !important;
+}
+
+.header-menu-sidebar-inner .solace-mega-menu .solace-mm-col > .sub-menu .sub-menu {
+  max-height: 0;
+}
+
+.header-menu-sidebar-inner .solace-mega-menu .solace-mm-col > .sub-menu .sub-menu.dropdown-open {
+  max-height: 3000px;
+}
+
+.header-menu-sidebar-inner .nav-ul > .solace-mega-menu .solace-mm-heading > span {
+  padding: 3px 0;
+}
+
+.header-menu-sidebar-inner .mobile-center .solace-mm-heading > a, .header-menu-sidebar-inner .mobile-center .solace-mm-heading > span, .header-menu-sidebar-inner .mobile-center .solace-mm-description {
+  text-align: center;
+  justify-content: center;
+}
+
+.header-menu-sidebar-inner .mobile-left .solace-mm-heading > a, .header-menu-sidebar-inner .mobile-left .solace-mm-heading > span, .header-menu-sidebar-inner .mobile-left .solace-mm-description {
+  text-align: right;
+  justify-content: flex-start;
+}
+
+.header-menu-sidebar-inner .mobile-right .solace-mm-heading > a, .header-menu-sidebar-inner .mobile-right .solace-mm-heading > span, .header-menu-sidebar-inner .mobile-right .solace-mm-description {
+  text-align: left;
+  justify-content: flex-end;
+}
+
+.header--row .builder-item.has-nav {
+  position: static;
+}
+
+@media (min-width: 576px) {
+  .header-menu-sidebar-inner .tablet-center .solace-mm-heading > a, .header-menu-sidebar-inner .tablet-center .solace-mm-heading > span, .header-menu-sidebar-inner .tablet-center .solace-mm-description {
+    text-align: center;
+    justify-content: center;
+  }
+  .header-menu-sidebar-inner .tablet-left .solace-mm-heading > a, .header-menu-sidebar-inner .tablet-left .solace-mm-heading > span, .header-menu-sidebar-inner .tablet-left .solace-mm-description {
+    text-align: right;
+    justify-content: flex-start;
+  }
+  .header-menu-sidebar-inner .tablet-right .solace-mm-heading > a, .header-menu-sidebar-inner .tablet-right .solace-mm-heading > span, .header-menu-sidebar-inner .tablet-right .solace-mm-description {
+    text-align: left;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 960px) {
+  .header--row .nv-nav-wrap .primary-menu-ul > .solace-mega-menu {
+    position: relative;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu > .sub-menu {
+    width: 950px;
+    position: absolute;
+    display: flex;
+    padding: 20px;
+    top: auto;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu > .sub-menu:not(.dropdown-open) {
+    pointer-events: none;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu:hover > .sub-menu,
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu:focus > .sub-menu,
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu:focus-within > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu li > > a, .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu li > > span {
+    padding: 7px 0;
+    margin: 0 14px;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu .solace-mm-col > .sub-menu {
+    visibility: visible;
+    position: relative;
+    right: initial !important;
+    left: initial !important;
+    opacity: 1;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 100%;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu .solace-mm-col > .sub-menu a {
+    white-space: normal;
+    justify-content: flex-start;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu .solace-mm-col {
+    padding: 0 10px;
+    align-items: flex-start;
+    border: none;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu .solace-mm-col:not(:last-child) {
+    border-left: 1px solid currentColor !important;
+  }
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu .solace-mm-col > .sub-menu li:not(.solace-mm-divider) {
+    border: none;
+  }
+  .solace-mm-description {
+    justify-content: center;
+    padding: 0 12px 7px;
+  }
+  .header-menu-sidebar-inner .desktop-center .solace-mm-heading > a, .header-menu-sidebar-inner .desktop-center .solace-mm-heading > span, .header-menu-sidebar-inner .desktop-center .solace-mm-description {
+    text-align: center;
+    justify-content: center;
+  }
+  .header-menu-sidebar-inner .desktop-left .solace-mm-heading > a, .header-menu-sidebar-inner .desktop-left .solace-mm-heading > span, .header-menu-sidebar-inner .desktop-left .solace-mm-description {
+    text-align: right;
+    justify-content: flex-start;
+  }
+  .header-menu-sidebar-inner .desktop-right .solace-mm-heading > a, .header-menu-sidebar-inner .desktop-right .solace-mm-heading > span, .header-menu-sidebar-inner .desktop-right .solace-mm-description {
+    text-align: left;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header--row .nv-nav-wrap .primary-menu-ul .solace-mega-menu > .sub-menu {
+    width: 1170px;
+  }
+}

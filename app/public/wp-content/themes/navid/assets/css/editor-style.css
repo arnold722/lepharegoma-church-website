@@ -1,0 +1,23 @@
+/* Editor Styles — Navid Theme */
+body {
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
+  color: #3d3d3d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+h2 { font-size: 28px; margin: 1.5em 0 0.5em; }
+h3 { font-size: 22px; margin: 1.2em 0 0.4em; }
+
+blockquote {
+  border-left: 3px solid #6d8a64;
+  padding-left: 20px;
+  font-style: italic;
+  font-family: 'Playfair Display', Georgia, serif;
+}

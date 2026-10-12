@@ -1,0 +1,360 @@
+/**
+ * Formula Deactivation Feedback Modal Styles
+ *
+ * Design matches the Formula admin "About" page aesthetic.
+ *
+ * @package formula
+ */
+
+/* ============================
+   CSS Variables (Formula Design System)
+   ============================ */
+.formula-deactivation-overlay {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary-color: #ec4899;
+    --accent-color: #f59e0b;
+    --success-color: #10b981;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --bg-white: #fff;
+    --border-color: #e2e8f0;
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --shadow-md: 0 4px 16px rgba(99, 102, 241, 0.15);
+    --shadow-lg: 0 8px 30px rgba(99, 102, 241, 0.2);
+    --radius: 12px;
+    --radius-lg: 16px;
+    --transition: 0.15s ease;
+}
+
+/* ============================
+   Modal Overlay
+   ============================ */
+.formula-deactivation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.5);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Prevent body scroll when modal is open */
+body.formula-modal-open {
+    overflow: hidden;
+}
+
+/* ============================
+   Modal Container
+   ============================ */
+.formula-deactivation-modal {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 520px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: formulaModalSlide 0.15s ease-out;
+}
+
+@keyframes formulaModalSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ============================
+   Close Button
+   ============================ */
+.formula-deactivation-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    padding: 4px 10px;
+    line-height: 1;
+    border-radius: 8px;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.formula-deactivation-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+/* ============================
+   Modal Header (Gradient Hero)
+   ============================ */
+.formula-deactivation-header {
+    background: var(--gradient-hero);
+    padding: 30px 30px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.formula-deactivation-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.08);
+    transform: rotate(20deg);
+    pointer-events: none;
+}
+
+.formula-deactivation-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin-bottom: 14px;
+
+}
+
+.formula-deactivation-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
+
+.formula-deactivation-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formula-deactivation-header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ============================
+   Modal Body
+   ============================ */
+.formula-deactivation-body {
+    padding: 24px 30px;
+}
+
+/* ============================
+   Feedback Options
+   ============================ */
+.formula-feedback-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formula-feedback-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    margin: 0;
+}
+
+.formula-feedback-option:hover {
+    background: #eef2ff;
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.formula-feedback-option input[type="radio"] {
+    margin: 0 12px 0 0;
+    flex-shrink: 0;
+    accent-color: var(--primary-color);
+}
+
+.formula-feedback-option input[type="radio"]:checked+span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.formula-feedback-option:has(input:checked) {
+    background: #eef2ff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.1);
+}
+
+.formula-feedback-option span {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+/* ============================
+   Feedback Details Textarea
+   ============================ */
+.formula-feedback-details {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.formula-feedback-details label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.formula-feedback-details textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.formula-feedback-details textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    outline: none;
+}
+
+/* ============================
+   Modal Footer
+   ============================ */
+.formula-deactivation-footer {
+    padding: 16px 30px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.formula-feedback-note {
+    margin: 0;
+    padding: 10px 14px;
+    background: #eef2ff;
+    border-left: 3px solid var(--primary-color);
+    font-size: 12px;
+    color: var(--text-muted);
+    border-radius: 0 8px 8px 0;
+    line-height: 1.5;
+}
+
+.formula-feedback-note a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.formula-feedback-note a:hover {
+    text-decoration: underline;
+}
+
+.formula-deactivation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* ============================
+   Buttons (Matching Formula Admin)
+   ============================ */
+.formula-deactivation-footer .button {
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    height: auto;
+    line-height: 1.5;
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.formula-skip-btn {
+    color: var(--text-muted) !important;
+    background: var(--bg-light) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.formula-skip-btn:hover {
+    color: var(--text-color) !important;
+    background: #e2e8f0 !important;
+    transform: translateY(-1px);
+}
+
+.formula-submit-btn {
+    color: #fff !important;
+    background: var(--gradient-primary) !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35) !important;
+}
+
+.formula-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45) !important;
+}
+
+.formula-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ============================
+   Responsive
+   ============================ */
+@media (max-width: 520px) {
+    .formula-deactivation-modal {
+        max-width: 100%;
+        margin: 10px;
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+    }
+
+    .formula-deactivation-header,
+    .formula-deactivation-body,
+    .formula-deactivation-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .formula-deactivation-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .formula-deactivation-footer .button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,221 @@
+.notice-solace {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.notice-solace img {
+    width: auto;
+    display: block;
+}
+
+.notice-solace p.sub-notice-title {
+	display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    color: #646970;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.notice-solace h2.notice-title {
+	color: #1e293b;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    line-height: 37px;
+    letter-spacing: -0.2px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+}
+
+.notice-solace p.description {
+	color: #475569;
+    font-size: 15px;
+    line-height: 28px;
+    line-height: 25px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+.notice-solace .notice-actions {
+	cursor: pointer;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+	border-radius: 6px;
+    background: #046bd2;
+	padding: 12px 24px;
+    color: white;
+    box-shadow: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.notice-solace .notice-actions button {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	border: none;
+	color: #fff;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.notice-solace .notice-actions button.starter-templates {
+	display: flex;
+}
+
+.notice-solace .notice-actions button.activating {
+	display: none;
+}
+
+.notice-solace .notice-actions button svg {
+	fill: #fff;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+    animation: rotate-right 2s linear infinite;
+}
+
+@keyframes rotate-right {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.notice-solace .notice-actions button:hover {
+	padding: 0;
+	margin: 0;
+	background: transparent;
+}
+
+.solace-col-left a.error {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 16px;
+}
+
+.notice-solace p.sub-notice-description {
+    color: #475569;
+    font-size: 13px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 16px 0 0;
+}
+
+.notice-solace p.sub-notice-description a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.notice-solace .boxes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.notice-solace .boxes .solace-col-left {
+    width: calc(50% - 28px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+	padding: 30px 0px 30px 28px;
+}
+
+.notice-solace .boxes .solace-col-right {
+    width: calc(50% - 12px);
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    .notice-solace .boxes .solace-col-left {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    .notice-solace .boxes .solace-col-left {
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .notice-solace .boxes .solace-col-left {
+        max-width: 600px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .notice-solace .boxes .solace-col-left {
+        max-width: 100%;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .notice-solace .boxes {
+        flex-direction: column;
+    }
+
+    .notice-solace .boxes .solace-col-right {
+        width: calc(100% - 12px);
+        height: 320px;
+        justify-content: center;
+        display: none;
+    }
+
+    .notice-solace .boxes .solace-col-right img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .notice-success {
+        background-image: none !important;
+    }
+
+    .notice-solace .boxes .solace-col-left {
+        width: calc(100% - 60px);
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px ) {
+    .notice-solace .boxes {
+        overflow: auto;
+    }
+
+    .notice-solace .boxes .solace-col-left {
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .notice-solace .boxes .solace-col-right {
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .notice-solace .boxes .solace-col-right img {
+        width: 100%;
+    }
+}

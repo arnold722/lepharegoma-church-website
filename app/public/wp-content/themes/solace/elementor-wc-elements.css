@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Solace - Elementor Pro "WooCommerce Elements" widget compatibility (v2)
+   --------------------------------------------------------------------------
+   Elementor Pro 4.x renders its WooCommerce widgets as
+   `.elementor-widget-wc-elements`; the legacy per-widget classes
+   (`.elementor-widget-woocommerce-cart`, `.elementor-widget-woocommerce-
+   checkout-page`, ...) no longer exist, so the scoped fixes inside
+   elementor-woo-widgets.css never match on pages built with the current
+   widgets. This file re-applies those fixes under the live class:
+
+   1. Cart       - coupon input + "Apply coupon" button share one row,
+                   "Update cart" margin reset.
+   2. Cart       - product-remove column (th/td) centered vs the link.
+   3. Checkout   - coupon box grid: input column gets the remaining space,
+                   button sized to its label.
+   4. My Account - two-column layout (nav left / content right). WC core
+                   scopes `float:left/right` to `body.woocommerce-account`,
+                   which never matches when the widget is embedded in a
+                   normal Elementor page, so nav and content stack into a
+                   single column there.
+
+   Everything is scoped to the Elementor widget wrapper, so plain
+   WooCommerce pages rendered by the theme are untouched.
+   ========================================================================== */
+
+/* 1) CART - coupon: input and Apply button share one row, equal height */
+body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.actions .coupon {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.actions .coupon .input-text {
+	flex: 1 1 auto;
+	width: auto;
+	min-width: 0;
+	height: auto;
+	margin: 0;
+}
+
+body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.actions .coupon .button {
+	flex: 0 0 auto;
+	width: auto;
+	height: auto;
+	margin: 0;
+	white-space: nowrap;
+	line-height: 1.2;
+}
+
+body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.actions > button[name="update_cart"] {
+	margin: 0;
+}
+
+/* Small screens: stack the coupon input above its button, both full width */
+@media (max-width: 768px) {
+
+	body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.actions .coupon {
+		flex-wrap: wrap;
+	}
+
+	body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.actions .coupon .input-text {
+		flex: 1 1 100%;
+	}
+
+	body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.actions .coupon .button {
+		flex: 1 1 auto;
+	}
+}
+
+/* 2) CART - product-remove column: center th label and per-row link */
+body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table th.product-remove,
+body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.product-remove {
+	text-align: center;
+	vertical-align: middle;
+}
+
+body .elementor-widget-wc-elements .woocommerce-cart-form table.shop_table td.product-remove a.remove {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	font-size: 20px;
+	line-height: 1;
+}
+
+/* 3) CHECKOUT - coupon box (e-coupon-box): give the input column the
+   remaining space and let the button size to its label. */
+body .elementor-widget-wc-elements .e-coupon-box .coupon-container-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: stretch;
+	column-gap: 10px;
+}
+
+body .elementor-widget-wc-elements .e-coupon-box .coupon-container-grid .coupon-col-1 {
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+	flex-basis: auto;
+}
+
+body .elementor-widget-wc-elements .e-coupon-box .coupon-container-grid .coupon-col-1 .input-text {
+	width: 100%;
+	min-width: 0;
+	height: 100%;
+	margin: 0;
+}
+
+body .elementor-widget-wc-elements .e-coupon-box .coupon-container-grid .coupon-col-2 {
+	padding: 0;
+	width: auto;
+}
+
+body .elementor-widget-wc-elements .e-coupon-box .coupon-container-grid .coupon-col-2 .button,
+body .elementor-widget-wc-elements .e-coupon-box .coupon-container-grid .e-apply-coupon {
+	width: auto;
+	min-width: fit-content;
+	height: 100%;
+	white-space: nowrap;
+	margin: 0;
+}
+
+/* 4) MY ACCOUNT - restore the two-column nav/content layout when the
+   widget is embedded in a normal Elementor page (body has no
+   `woocommerce-account` class, so the core rule never applies). */
+body .elementor-widget-wc-elements .woocommerce-MyAccount-navigation {
+	float: left;
+	width: 30%;
+}
+
+body .elementor-widget-wc-elements .woocommerce-MyAccount-content {
+	float: right;
+	width: 68%;
+}
+
+/* Clearfix for the floated columns, scoped to the widget's WC wrapper */
+body .elementor-widget-wc-elements .woocommerce::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* Small screens: nav stacks above content, both full width */
+@media (max-width: 768px) {
+
+	body .elementor-widget-wc-elements .woocommerce-MyAccount-navigation,
+	body .elementor-widget-wc-elements .woocommerce-MyAccount-content {
+		float: none;
+		width: 100%;
+	}
+}
+
+/* ==========================================================================
+   5) GLOBAL THEMING - align colors / padding / margin with the Elementor kit.
+      These rules mirror what the (optional) Solace Extra plugin's
+      `wc-elements-global-colors.css` provides, so pages keep the site's
+      global look even when that plugin is not active. Backgrounds of the
+      cart totals / review order / address boxes and table header are left
+      untouched (kept transparent / default) on purpose.
+   ========================================================================== */
+
+body .elementor-widget-wc-elements .woocommerce {
+	color: var(--e-global-color-solcolorbasefont, var(--e-global-color-text, #514d55));
+}
+
+body .elementor-widget-wc-elements .woocommerce h1,
+body .elementor-widget-wc-elements .woocommerce h2,
+body .elementor-widget-wc-elements .woocommerce h3,
+body .elementor-widget-wc-elements .woocommerce h4 {
+	color: var(--e-global-color-solcolorheading, var(--e-global-color-secondary, #3e3e3e));
+}
+
+body .elementor-widget-wc-elements .woocommerce a,
+body .elementor-widget-wc-elements .woocommerce .lost_password a,
+body .elementor-widget-wc-elements .woocommerce .woocommerce-info a {
+	color: var(--e-global-color-solcolorlinkbuttoninitial, var(--e-global-color-accent, #d99653));
+}
+
+/* Buttons: kit accent + white text, 12/24 padding (same as Elementor button) */
+body .elementor-widget-wc-elements .woocommerce button.button,
+body .elementor-widget-wc-elements .woocommerce a.button,
+body .elementor-widget-wc-elements .woocommerce input.button,
+body .elementor-widget-wc-elements .woocommerce button[type="submit"] {
+	background: var(--e-global-color-solcolorbuttoninitial, var(--e-global-color-primary, #d99653));
+	border-color: var(--e-global-color-solcolorbuttoninitial, var(--e-global-color-primary, #d99653));
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 0;
+	font-family: var(--e-global-typography-primary-font-family, inherit) !important;
+}
+
+body .elementor-widget-wc-elements .woocommerce button.button:hover,
+body .elementor-widget-wc-elements .woocommerce button.button:focus,
+body .elementor-widget-wc-elements .woocommerce a.button:hover,
+body .elementor-widget-wc-elements .woocommerce a.button:focus,
+body .elementor-widget-wc-elements .woocommerce input.button:hover,
+body .elementor-widget-wc-elements .woocommerce input.button:focus,
+body .elementor-widget-wc-elements .woocommerce button[type="submit"]:hover,
+body .elementor-widget-wc-elements .woocommerce button[type="submit"]:focus {
+	background: var(--e-global-color-solcolorbuttonhover, var(--e-global-color-secondary, #cf8439));
+	border-color: var(--e-global-color-solcolorbuttonhover, var(--e-global-color-secondary, #cf8439));
+	color: #fff;
+}
+
+/* Place order: kit-styled, full width, consistent padding */
+body .elementor-widget-wc-elements .woocommerce #place_order {
+	background: var(--e-global-color-solcolorbuttoninitial, var(--e-global-color-primary, #d99653));
+	border-color: var(--e-global-color-solcolorbuttoninitial, var(--e-global-color-primary, #d99653));
+	color: #fff;
+	padding: 16px 0;
+	width: 100%;
+	text-align: center;
+	border-radius: 0;
+	font-family: var(--e-global-typography-primary-font-family, inherit) !important;
+}
+
+body .elementor-widget-wc-elements .woocommerce #place_order:hover,
+body .elementor-widget-wc-elements .woocommerce #place_order:focus {
+	background: var(--e-global-color-solcolorbuttonhover, var(--e-global-color-secondary, #cf8439));
+	border-color: var(--e-global-color-solcolorbuttonhover, var(--e-global-color-secondary, #cf8439));
+	color: #fff;
+}
+
+/* Tables: kit border color */
+body .elementor-widget-wc-elements .woocommerce table.shop_table {
+	border-color: var(--e-global-color-solcolorborder, var(--e-global-color-secondary, #dfe0df));
+}
+
+body .elementor-widget-wc-elements .woocommerce table.shop_table th,
+body .elementor-widget-wc-elements .woocommerce table.shop_table td {
+	border-color: var(--e-global-color-solcolorborder, var(--e-global-color-secondary, #dfe0df));
+}
+
+body .elementor-widget-wc-elements .woocommerce table.shop_table th {
+	color: var(--e-global-color-solcolorheading, var(--e-global-color-secondary, #3e3e3e));
+}
+
+/* Totals / review order / address boxes: kit border only (no background) */
+body .elementor-widget-wc-elements .woocommerce .cart_totals,
+body .elementor-widget-wc-elements .woocommerce .woocommerce-checkout-review-order,
+body .elementor-widget-wc-elements .woocommerce .woocommerce-billing-fields,
+body .elementor-widget-wc-elements .woocommerce .woocommerce-shipping-fields,
+body .elementor-widget-wc-elements .woocommerce .woocommerce-additional-fields {
+	border-color: var(--e-global-color-solcolorborder, var(--e-global-color-secondary, #dfe0df));
+}
+
+/* Form inputs: kit border + text, focus = accent */
+body .elementor-widget-wc-elements .woocommerce input.input-text,
+body .elementor-widget-wc-elements .woocommerce input[type="text"],
+body .elementor-widget-wc-elements .woocommerce input[type="email"],
+body .elementor-widget-wc-elements .woocommerce input[type="tel"],
+body .elementor-widget-wc-elements .woocommerce input[type="password"],
+body .elementor-widget-wc-elements .woocommerce input[type="number"],
+body .elementor-widget-wc-elements .woocommerce textarea,
+body .elementor-widget-wc-elements .woocommerce select,
+body .elementor-widget-wc-elements .woocommerce .select2-container .select2-selection--single {
+	border-color: var(--e-global-color-solcolorborder, var(--e-global-color-secondary, #dfe0df));
+	color: var(--e-global-color-solcolorbasefont, var(--e-global-color-text, #514d55));
+}
+
+body .elementor-widget-wc-elements .woocommerce input.input-text:focus,
+body .elementor-widget-wc-elements .woocommerce input[type="text"]:focus,
+body .elementor-widget-wc-elements .woocommerce input[type="email"]:focus,
+body .elementor-widget-wc-elements .woocommerce input[type="tel"]:focus,
+body .elementor-widget-wc-elements .woocommerce input[type="password"]:focus,
+body .elementor-widget-wc-elements .woocommerce input[type="number"]:focus,
+body .elementor-widget-wc-elements .woocommerce textarea:focus,
+body .elementor-widget-wc-elements .woocommerce select:focus,
+body .elementor-widget-wc-elements .woocommerce .select2-container .select2-selection--single:focus {
+	border-color: var(--e-global-color-solcolorbuttoninitial, var(--e-global-color-primary, #d99653));
+}
+
+/* Notices follow kit colors (top edge keeps WC semantics) */
+body .elementor-widget-wc-elements .woocommerce .woocommerce-info {
+	border-top-color: var(--e-global-color-solcolorbuttoninitial, var(--e-global-color-primary, #d99653));
+}
+
+/* Cart totals checkout button: full-width + top margin */
+body .elementor-widget-wc-elements .woocommerce .cart_totals a.checkout-button {
+	margin-top: 16px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+/* Payment box: neutralize WC default purple tint, use kit colors */
+body .elementor-widget-wc-elements .woocommerce #payment {
+	background: transparent;
+	border-color: var(--e-global-color-solcolorborder, var(--e-global-color-secondary, #dfe0df));
+}
+
+body .elementor-widget-wc-elements .woocommerce #payment div.payment_box {
+	background: var(--e-global-color-solcolorbackground, #ffffff);
+	border-color: var(--e-global-color-solcolorborder, var(--e-global-color-secondary, #dfe0df));
+}

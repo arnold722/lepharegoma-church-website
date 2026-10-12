@@ -1,0 +1,86 @@
+.elementor-widget-text-editor p,
+.elementor-widget-text-editor li,
+.elementor-widget-text-editor ul {
+    font-size: unset;
+    line-height: unset;
+    letter-spacing: unset;
+    text-transform: unset;
+    font-weight: unset;
+}
+
+.solace-gutenberg-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.solace-gutenberg-width100 {
+    width: 100% !important;
+}
+
+.solace-gutenberg-btn-outline {
+    border: 1px solid #3662FF;
+    border-radius: 8px;
+}
+
+.solace-gutenberg-box-shadow {
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, .1);
+}
+
+.solace-gutenberg-border-color {
+    border-bottom-color: #374151 !important;
+}
+
+.solace-gutenberg-background-color-overlay::before {
+    content: '';
+    background: #000;
+    opacity: .5;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    max-width: 99.3vw;
+    width: 100vw;
+    top: 0;
+    left: -15vw;
+}
+
+.solace-gutenberg-right-2 {
+    position: relative;
+    right: 2px;
+}
+
+.solace-gutenberg-margin-0 {
+    margin: 0;
+}
+
+.solace-gutenberg-z-index-99 {
+    z-index: 99;
+}
+
+.wp-block-group.solace-gutenberg-w-1216 {
+    width: 1216px;
+}
+
+.solace-gutenberg-summary summary {
+    position: relative;
+}
+
+.solace-gutenberg-summary summary:hover {
+    color: #3662ff;
+}
+
+.solace-gutenberg-summary summary::marker {
+    content: '';
+}
+
+.solace-gutenberg-summary summary::after {
+    content: "";
+    background-image: url(../img/patterns//pluss.svg);
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+}

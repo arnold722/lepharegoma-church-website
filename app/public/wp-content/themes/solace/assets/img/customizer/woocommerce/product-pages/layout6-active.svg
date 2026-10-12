@@ -1,0 +1,16 @@
+<svg width="149" height="153" viewBox="0 0 149 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M139 0H10C4.47715 0 0 4.47715 0 10V143C0 148.523 4.47715 153 10 153H139C144.523 153 149 148.523 149 143V10C149 4.47715 144.523 0 139 0Z" fill="#FF9600"/>
+<path d="M11 20C11 14.4772 15.4772 10 21 10H128C133.523 10 138 14.4772 138 20V153H11V20Z" fill="white"/>
+<rect x="18" y="18" width="113" height="58" rx="2" fill="#414141"/>
+<rect x="18" y="78" width="24" height="3" rx="1.5" fill="#D9D9D9"/>
+<rect x="54" y="78" width="24" height="3" rx="1.5" fill="#D9D9D9"/>
+<rect x="93" y="78" width="24" height="3" rx="1.5" fill="#D9D9D9"/>
+<line x1="53.75" y1="76" x2="53.75" y2="18" stroke="white" stroke-width="0.5"/>
+<line x1="92.75" y1="76" x2="92.75" y2="18" stroke="white" stroke-width="0.5"/>
+<rect x="18" y="86" width="113" height="58" rx="2" fill="#414141"/>
+<rect x="18" y="146" width="24" height="3" rx="1.5" fill="#D9D9D9"/>
+<rect x="54" y="146" width="24" height="3" rx="1.5" fill="#D9D9D9"/>
+<rect x="93" y="146" width="24" height="3" rx="1.5" fill="#D9D9D9"/>
+<line x1="53.75" y1="144" x2="53.75" y2="86" stroke="white" stroke-width="0.5"/>
+<line x1="92.75" y1="144" x2="92.75" y2="86" stroke="white" stroke-width="0.5"/>
+</svg>

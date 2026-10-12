@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <linearGradient id="splitBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="splitShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect width="256" height="256" rx="56" fill="url(#splitBg)"/>
+
+  <!-- Subtle Inner Border -->
+  <rect x="4" y="4" width="248" height="248" rx="52" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.2"/>
+
+  <!-- Split Test Diagram & Nodes -->
+  <g filter="url(#splitShadow)">
+    <!-- Branching Tree Lines -->
+    <path d="M 68 184 L 68 128 C 68 96 112 96 112 72 L 112 60" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 68 128 C 68 96 188 96 188 120 L 188 184" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Root / Input Node -->
+    <circle cx="68" cy="184" r="22" fill="#ffffff"/>
+    <circle cx="68" cy="184" r="10" fill="#0f766e"/>
+
+    <!-- Branch A (Control Node) -->
+    <circle cx="112" cy="60" r="20" fill="#ccfbf1"/>
+    <text x="112" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#0f766e" text-anchor="middle">A</text>
+
+    <!-- Branch B (Winning Variant Node with Accent) -->
+    <circle cx="188" cy="184" r="26" fill="#ffffff"/>
+    <circle cx="188" cy="184" r="21" fill="#2dd4bf"/>
+    <text x="188" y="191" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="900" fill="#0f766e" text-anchor="middle">B</text>
+
+    <!-- Winning Trophy / Star Sparkle over Variant B -->
+    <path d="M 198 128 Q 198 138 188 138 Q 198 138 198 148 Q 198 138 208 138 Q 198 138 198 128 Z" fill="#fef08a"/>
+  </g>
+</svg>

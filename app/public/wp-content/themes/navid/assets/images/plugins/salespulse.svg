@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <linearGradient id="salespulseBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+    <filter id="pulseShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect width="256" height="256" rx="56" fill="url(#salespulseBg)"/>
+
+  <!-- Subtle Inner Border -->
+  <rect x="4" y="4" width="248" height="248" rx="52" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.2"/>
+
+  <!-- Sales Notification Toast Bubble with Pulsing Indicator -->
+  <g filter="url(#pulseShadow)">
+    <!-- Notification Toast Capsule -->
+    <rect x="42" y="76" width="172" height="104" rx="28" fill="#ffffff"/>
+    
+    <!-- Toast tail / indicator -->
+    <path d="M 76 180 L 64 198 L 94 180 Z" fill="#ffffff"/>
+
+    <!-- Glowing Live Pulse Ring -->
+    <circle cx="82" cy="128" r="22" fill="#ffe4e6"/>
+    <circle cx="82" cy="128" r="14" fill="#f43f5e"/>
+    <circle cx="82" cy="128" r="7" fill="#ffffff"/>
+
+    <!-- Pulsing waveform / heartbeat lines representing live sales activity -->
+    <path d="M 122 136 L 136 136 L 144 114 L 154 146 L 164 126 L 172 136 L 190 136" fill="none" stroke="#e11d48" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Small shopping bag / sale check badge -->
+    <circle cx="186" cy="94" r="14" fill="#10b981"/>
+    <path d="M 181 94 L 185 98 L 192 90" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,674 @@
+ul#sub-accordion-section-footer_social {
+    height: 100% !important;
+}
+
+.footer_social_sortable_control .sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_social_sortable_control .sortable input[type="text"] {
+    margin: 5px 5px 5px 0;
+    width: 80%;
+}
+
+.footer_social_sortable_control .sortable div {
+    cursor: move;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_social_sortable_control .repeater .dashicons-sort {
+    margin: 8px 5px 0 5px;
+    color: #d4d4d4;
+}
+
+.footer_social_sortable_control .repeater .dashicons-sort svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.footer_social_sortable_control .repeater .dashicons-sort::before {
+    content: none;
+}
+
+.footer_social_sortable_control .repeater .dashicons-sort:hover {
+    color: #a7a7a7;
+}
+
+.footer_social_sortable_control .repeater {
+    margin-bottom: 7px;
+    border: 1px solid var(--sol-customizer-panel-bg-color);
+    border-radius: 3px;
+}
+
+.footer_social_sortable_control .repeater input {
+    padding: 4px 10px;
+    margin-bottom: 10px !important;
+}
+
+.footer_social_sortable_control .repeater .box-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    color: var(--sol-customizer-text-color);
+    background-color: var(--sol-customizer-panel-bg-color);
+    padding: 8px 16px;
+}
+
+.footer_social_sortable_control .repeater .box-info~div {
+    display: none;
+}
+
+.footer_social_sortable_control .repeater .box-info.active~div {
+    display: block;
+}
+
+.footer_social_sortable_control .repeater .box-info .drag {
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 5px 8px;
+    display: none;
+}
+
+.footer_social_sortable_control .repeater .box-info .drag svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.footer_social_sortable_control .repeater .box-info .text-code,
+.footer_social_sortable_control .repeater .box-info .text {
+    flex-grow: 8
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-custom {
+    display: none;
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-custom button,
+.footer_social_sortable_control .repeater .box-info .box-color-ori button {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-custom,
+.footer_social_sortable_control .repeater .box-info .box-color-ori {
+    padding: 5px 8px;
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-custom .color,
+.footer_social_sortable_control .repeater .box-info .box-color-ori .color {
+    border-radius: 50%;
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-custom .gradient,
+.footer_social_sortable_control .repeater .box-info .box-color-ori .gradient {
+    background-image: linear-gradient(45deg,#fff,#ccc 0,#ccc 10%,#fff 0,#fff 20%,#ccc 0,#ccc 30%,#fff 0,#fff 40%,#ccc 0,#ccc 50%,#fff 0,#fff 60%,#ccc 0,#ccc 70%,#fff 0,#fff 80%,#ccc 0,#ccc 90%,#fff 0,#fff 100%,#ccc 0);
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+/* .footer_social_sortable_control .repeater .box-info .box-color-ori button {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    display: none;
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-ori .color {
+
+    border-radius: 50%;
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-ori .gradient {
+    background-image: linear-gradient(45deg,#fff,#ccc 0,#ccc 10%,#fff 0,#fff 20%,#ccc 0,#ccc 30%,#fff 0,#fff 40%,#ccc 0,#ccc 50%,#fff 0,#fff 60%,#ccc 0,#ccc 70%,#fff 0,#fff 80%,#ccc 0,#ccc 90%,#fff 0,#fff 100%,#ccc 0);
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+} */
+
+.footer_social_sortable_control .repeater .box-info .toggle {
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+.footer_social_sortable_control .repeater .box-info .toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.footer_social_sortable_control .repeater .box-info .toggle span {
+    margin: 0;
+}
+
+.footer_social_sortable_control .repeater .box-info .close {
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 5px 8px;
+}
+
+.footer_social_sortable_control .repeater .box-info .close svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.footer_social_sortable_control .repeater .box-input-title,
+.footer_social_sortable_control .repeater .box-input-content,
+.footer_social_sortable_control .repeater .box-input-link,
+.footer_social_sortable_control .repeater .box-input-sosmed {
+    width: 100%;
+    /* border-bottom: 1px solid var(--sol-customizer-panel-bg-color); */
+    padding: 10px;
+}
+
+.footer_social_sortable_control .repeater .box-input-title label,
+.footer_social_sortable_control .repeater .box-input-content label,
+.footer_social_sortable_control .repeater .box-input-link label,
+.footer_social_sortable_control .repeater .box-input-sosmed label {
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_social_sortable_control .repeater .box-input-title input,
+.footer_social_sortable_control .repeater .box-input-content input,
+.footer_social_sortable_control .repeater .box-input-link input,
+.footer_social_sortable_control .repeater .box-input-sosmed input {
+    width: 140px;
+}
+
+.footer_social_sortable_control .repeater .box-input-title {}
+
+.footer_social_sortable_control .repeater .box-input-content {}
+
+.footer_social_sortable_control .repeater .box-input-link {
+    border-radius: 0 0 5px 5px;
+}
+
+.footer_social_sortable_control .repeater .box-input-sosmed {
+    border-radius: 0 0 5px 5px;
+    display: none !important;
+}
+
+/* ======================================Customizer====================================== */
+li#customize-control-footer_social_tabs {
+    display: none;
+}
+
+li#customize-control-footer_social_footer_social_setting {
+    margin-bottom: 0;
+}
+
+li#customize-control-footer_social_footer_social_setting .box-info.active #toggle-slide svg {
+    transform: rotate(180deg);
+}
+
+li#customize-control-footer_social_footer_social_setting .box-info .text,
+li#customize-control-footer_social_footer_social_setting .box-info .text-code {
+    text-transform: capitalize;
+}
+
+li#customize-control-footer_social_footer_social_setting .box-info .text-code + .text {
+    display: none;
+}
+
+li#customize-control-footer_social_footer_social_setting .box-input-title {
+    display: none;
+}
+
+li#customize-control-footer_social_footer_social_setting .components-dropdown-menu {
+    display: none;
+}
+
+/* listing color */
+li#customize-control-footer_social_icon_color_facebook_setting,
+li#customize-control-footer_social_icon_color_youtube_setting,
+li#customize-control-footer_social_icon_color_twitter_setting,
+li#customize-control-footer_social_icon_color_tiktok_setting,
+li#customize-control-footer_social_icon_color_telegram_setting,
+li#customize-control-footer_social_icon_color_pinterest_setting,
+li#customize-control-footer_social_icon_color_linkedin_setting,
+li#customize-control-footer_social_icon_color_instagram_setting,
+li#customize-control-footer_social_icon_color_whatsapp_setting,
+li#customize-control-footer_social_icon_color_threads_setting {    
+    background: transparent;
+    position: absolute;
+    margin: 0;
+    height: 0;
+    width: 0;
+    right: -25px;
+    top: 141px;
+}
+
+li#customize-control-footer_social_icon_color_facebook_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_youtube_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_twitter_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_tiktok_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_telegram_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_pinterest_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_linkedin_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_instagram_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_threads_setting .solace-color-control,
+li#customize-control-footer_social_icon_color_whatsapp_setting .solace-color-control {
+    background: transparent;
+}
+
+li#customize-control-footer_social_icon_color_facebook_setting span,
+li#customize-control-footer_social_icon_color_youtube_setting span,
+li#customize-control-footer_social_icon_color_twitter_setting span,
+li#customize-control-footer_social_icon_color_tiktok_setting span,
+li#customize-control-footer_social_icon_color_telegram_setting span,
+li#customize-control-footer_social_icon_color_pinterest_setting span,
+li#customize-control-footer_social_icon_color_linkedin_setting span,
+li#customize-control-footer_social_icon_color_instagram_setting span,
+li#customize-control-footer_social_icon_color_threads_setting span,
+li#customize-control-footer_social_icon_color_whatsapp_setting span {
+    display: none;
+}
+
+li#customize-control-footer_social_icon_color_facebook_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_youtube_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_twitter_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_tiktok_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_telegram_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_pinterest_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_linkedin_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_instagram_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_threads_setting .components-dropdown,
+li#customize-control-footer_social_icon_color_whatsapp_setting .components-dropdown {
+    position: relative;
+    right: 120px;
+    top: 55px;
+    z-index: 99;
+}
+
+li#customize-control-footer_social_icon_color_facebook_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_youtube_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_twitter_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_tiktok_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_telegram_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_pinterest_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_linkedin_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_instagram_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_threads_setting .components-dropdown > button,
+li#customize-control-footer_social_icon_color_whatsapp_setting .components-dropdown > button {
+    opacity: 0;
+    display: none;
+}
+
+/* ======================================Dropdown====================================== */
+li#customize-control-footer_social_footer_social_setting .add-new-label {
+    /* border-top: 1px solid var(--sol-customizer-panel-bg-color); */
+    margin-top: 21px;
+    padding-top: 19px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.container-dropdown-footer-social {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -30%);
+    -moz-transform: translate(-50%, -30%);
+    -ms-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.container-dropdown-footer-social .box-dropdown {
+    position: relative;
+    cursor: pointer;
+    color: var(--sol-customizer-text-color);
+    background: var(--sol-customizer-panel-bg-color);
+    padding: 14px 16px;
+    margin: 20px 0;
+    border: 1px solid var(--sol-customizer-panel-bg-color);
+    border-radius: 3px;
+    width: 60%;
+    margin-right: 3%;
+}
+
+.container-dropdown-footer-social .box-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #ffffff transparent;
+}
+
+.container-dropdown-footer-social .box-dropdown.active::before {
+    border-width: 0 5px 5px 5px;
+}
+
+.container-dropdown-footer-social .box-dropdown .title-active {
+    font-size: 18px;
+}
+
+.container-dropdown-footer-social .box-dropdown ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    transition: .5s ease;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    color: var(--sol-customizer-text-color);
+    background: var(--sol-customizer-panel-bg-color);
+    border: 1px solid var(--sol-customizer-panel-bg-color);
+    border-radius: 3px;
+}
+
+.container-dropdown-footer-social .box-dropdown ul li {
+    padding: 12px 15px;
+    margin: 0;
+    border-bottom: 1px solid #283e60;
+    overflow: hidden;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    transition: .5s ease;
+    font-size: 15px;
+}
+
+.container-dropdown-footer-social .box-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.container-dropdown-footer-social .box-dropdown ul li:hover {
+    background: #06224d;
+}
+
+.container-dropdown-footer-social .box-dropdown.active ul {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.container-dropdown-footer-social .box-add-dropdown {
+    width: 20%;
+}
+
+.container-dropdown-footer-social .box-add-dropdown button {
+    cursor: pointer;
+    color: var(--sol-customizer-text-color);
+    background: var(--sol-customizer-panel-bg-color);
+    border: 1px solid var(--sol-customizer-panel-bg-color);
+    border-radius: 3px;
+    padding: 11px 10px;
+}
+
+/* ======================================Toggle====================================== */
+li#customize-control-footer_social_toggle_icon {
+    padding: 23px 0;
+    border: 1px solid var(--sol-customizer-panel-bg-color);
+    border: none;
+    border-left: none;
+    border-right: none;
+}
+
+li#customize-control-footer_social_toggle_icon .components-dropdown-menu {
+    display: none;
+}
+
+/* ======================================Border====================================== */
+li#customize-control-footer_social_footer_social_setting {
+    /* border-bottom: 1px solid var(--sol-customizer-panel-bg-color); */
+    margin-top: 21px;
+}
+
+/* ======================================Range====================================== */
+/* Dot */
+li#customize-control-footer_social_icon_size .range-wrap .components-range-control__thumb-wrapper span {
+    background: #FF9400;
+}
+
+/* Active border */
+li#customize-control-footer_social_icon_size .range-wrap .components-range-control__wrapper {
+    color: #fff;
+}
+
+/* Input */
+li#customize-control-footer_social_icon_size .range-wrap .components-input-control__container {
+    border-radius: 25px;
+}
+
+li#customize-control-footer_social_icon_size .range-wrap .components-input-control__container::after {
+    content: "px";
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    color: #001944;
+}
+
+li#customize-control-footer_social_icon_size .range-wrap .components-input-control__container input {
+    position: relative;
+    left: 10px;
+}
+
+/* Deactive border */
+li#customize-control-footer_social_icon_size .range-wrap .components-range-control__wrapper span.css-1tw038v{
+    background: #fff;
+}
+
+/* ======================================New Style====================================== */
+.footer_social_sortable_control .customize-control-title {
+    display: none;
+}
+
+.footer_social_sortable_control .repeater {
+    border: none;
+}
+
+.footer_social_sortable_control .repeater .box-info {
+    position: relative;
+    padding: 6px 16px;
+    background: #fff;
+    border-radius: 25px;
+    width: calc(100% - 66px);
+}
+
+/* Text */
+.footer_social_sortable_control .repeater .box-info .text-code,
+.footer_social_sortable_control .repeater .box-info .text {
+    color: #001944;
+    font-size: 15px;
+}
+
+/* Color custom */
+.footer_social_sortable_control .repeater .box-info .box-color-custom,
+.footer_social_sortable_control .repeater .box-info .box-color-ori {
+    padding: 0 8px;
+}
+
+.footer_social_sortable_control .repeater .box-info .box-color-custom button,
+.footer_social_sortable_control .repeater .box-info .box-color-ori button {
+    border: 3px solid #D3D3D3;
+    width: 30px;
+    height: 30px;
+}
+
+/* Toggle */
+.footer_social_sortable_control .repeater .box-info .toggle svg {
+    width: 18px;
+    height: 18px;
+    fill: #242424;
+}
+
+/* Close */
+.footer_social_sortable_control .repeater .box-info .close {
+    background: var(--sol-customizer-bg-color);
+    position: absolute;
+    right: -33px;
+    padding: 5px;
+}
+
+.footer_social_sortable_control .repeater .box-info .close svg {
+    width: 18px;
+    height: 18px;
+    fill: #ff8400;
+}
+
+/* Box input link */
+.footer_social_sortable_control .repeater .box-input-link {
+    padding: 0;
+}
+
+.footer_social_sortable_control .repeater:last-child .box-input-link{
+    border: none;
+}
+
+.footer_social_sortable_control .repeater .box-input-link label {
+    color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    bottom: 9px;
+    width: calc(100% - 30px) !important;
+}
+
+.footer_social_sortable_control .repeater .box-input-link label input {
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background: var(--sol-customizer-bg-color);
+    color: #fff;
+    margin: 0 !important;
+    padding: 6px 16px;
+    width: 100% !important;
+    position: relative;
+    top: 1px;
+}
+
+/* Dropdown */
+.container-dropdown-footer-social .box-dropdown {
+    border-radius: 25px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    position: relative;
+    padding: 6px 16px;
+    background: #fff;
+    border-radius: 25px;
+    width: calc(100% - 67px);
+    margin-right: 0;
+    margin-bottom: 7px;
+    height: 30px;
+}
+
+.container-dropdown-footer-social .box-dropdown.active .arrow-top svg {
+    transform: rotate(180deg);
+}
+
+.container-dropdown-footer-social .box-dropdown::before {
+    display: none;
+}
+
+.container-dropdown-footer-social .box-dropdown .title-active {
+    color: #001944;
+    font-size: 15px;
+}
+
+.container-dropdown-footer-social .box-dropdown .arrow-top {
+    margin: 0;
+    line-height: 0;
+}
+
+.container-dropdown-footer-social .box-dropdown .arrow-top svg {
+    width: 18px;
+    height: 18px;
+    fill: #242424;
+}
+
+.container-dropdown-footer-social .box-add-dropdown {
+    width: auto;
+    position: relative;
+    top: 8px;
+}
+
+.container-dropdown-footer-social .box-add-dropdown button {
+    padding: 0;
+    border: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--sol-customizer-bg-color);
+    padding: 4px;
+    position: relative;
+    right: 3px;
+}
+
+.container-dropdown-footer-social .box-add-dropdown button svg {
+    width: 18px;
+    height: 18px;
+    fill: #FF8400;
+}
+
+.container-dropdown-footer-social .box-dropdown ul {
+    border: 1px solid #fff;
+    border: none;
+    background: transparent;
+}
+
+.container-dropdown-footer-social .box-dropdown ul li {
+    background: var(--sol-customizer-bg-color);
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    color: #001944;
+    border-radius: 25px;
+    margin: 5px 0;
+}
+
+.container-dropdown-footer-social .box-dropdown ul li:hover {
+    background: #ccc;
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <linearGradient id="matchaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7e9c74"/>
+      <stop offset="100%" stop-color="#5a7251"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8f0e6"/>
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect width="256" height="256" rx="56" fill="url(#matchaBg)"/>
+
+  <!-- Subtle Inner Border -->
+  <rect x="4" y="4" width="248" height="248" rx="52" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.2"/>
+
+  <!-- Central Emblem: Signature WPMatcha Leaf with Companion Star -->
+  <g filter="url(#subtleShadow)">
+    <!-- WPMatcha Signature Leaf Contour -->
+    <path d="M 82 52 L 154 52 A 50 50 0 0 1 204 102 L 204 174 L 132 174 A 50 50 0 0 1 82 124 Z" fill="url(#leafGrad)"/>
+
+    <!-- Leaf Stem / Vein Detail -->
+    <path d="M 82 124 Q 132 124 204 52" fill="none" stroke="#68845e" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Companion "Extra" Sparkle / Star (Bottom Left) -->
+    <path d="M 68 184 Q 68 198 54 198 Q 68 198 68 212 Q 68 198 82 198 Q 68 198 68 184 Z" fill="#ffffff"/>
+    
+    <!-- Companion "Extra" Sparkle / Star (Top Right) -->
+    <path d="M 188 36 Q 188 46 178 46 Q 188 46 188 56 Q 188 46 198 46 Q 188 46 188 36 Z" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>

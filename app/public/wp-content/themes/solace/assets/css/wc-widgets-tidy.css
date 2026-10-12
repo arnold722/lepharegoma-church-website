@@ -1,0 +1,719 @@
+/**
+ * WooCommerce Sidebar Widgets – Tidy-Up Stylesheet
+ *
+ * Scope   : sidebar / widget-area only (shop sidebar, blog sidebar, footer widget areas).
+ * Purpose : fix broken/untidy styling of the default WooCommerce widgets that the
+ *           theme's own stylesheets (theme.min.css / woocommerce.min.css) leave behind:
+ *
+ *           1. Rating filter  – stars misaligned (text "SSSSS" without the WooCommerce
+ *                                star font, no left alignment, count pushed to next line).
+ *           2. Cart widget    – remove (×) button floated too high / overlapping the
+ *                                thumbnail, "View cart / Checkout" buttons unaligned.
+ *           3. Generic lists  – theme adds `list-style: disc` + `margin-left:20px` +
+ *                                `margin-top:10px` to every `.widget li`, which breaks the
+ *                                WC list widgets (bullets, ragged left edge, uneven rows).
+ *           4. Brand widgets  – brand list / thumbnails alignment + thumbnail rounding.
+ *           5. Search widget  – input + button don't sit on one row.
+ *           6. Tag cloud      – uneven inline spacing.
+ *           7. Price filter   – "Filter" button alignment.
+ *
+ * Loaded AFTER the theme + WooCommerce stylesheets, so a few targeted resets are enough.
+ */
+
+/* ==========================================================================
+   0. Base – neutralise theme list/bullet resets inside WC widgets only
+   ========================================================================== */
+
+.widget.woocommerce ul,
+.widget.woocommerce ol,
+.widget.widget_brand_thumbnails ul,
+.widget.woocommerce ul.woocommerce-widget-layered-nav-list,
+.widget.woocommerce ul.product_list_widget,
+.widget.woocommerce ul.cart_list,
+.widget.woocommerce .widget_rating_filter ul,
+.widget.woocommerce .wc-brand-list-layered-nav-product_brand,
+.widget.woocommerce .wc-brand-list-layered-nav-product_brand ul {
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.widget.woocommerce ul li,
+.widget.woocommerce ol li,
+.widget.widget_brand_thumbnails ul li {
+	list-style: none !important;
+	margin-left: 0 !important;
+	margin-top: 0 !important;
+}
+
+/* Phantom clearfix pseudo-elements (`content:" "; display:table`) that the theme
+   applies to list items become zero-width boxes inside our flex/grid rows — an
+   invisible flex item (extra 8px gap) or an empty 48px grid cell — pushing
+   content off the left edge. Neutralise them inside WC widgets only. */
+.widget.woocommerce ul li::before,
+.widget.woocommerce ul li::after,
+.widget.woocommerce ul::before,
+.widget.woocommerce ul::after {
+	content: none !important;
+	display: none !important;
+}
+
+.widget.woocommerce h5,
+.widget.woocommerce .widget-title,
+.widget.widget_brand_thumbnails h5 {
+	margin-top: 0;
+	margin-bottom: 12px;
+	text-transform: capitalize;
+}
+
+.widget.woocommerce {
+	margin-bottom: 28px;
+}
+
+/* ==========================================================================
+   1. Star ratings (used by rating filter, top rated, recent reviews)
+      Root fix: the theme drops the @font-face "star" font, so `.star-rating`
+      renders the raw "SSSSS" text. Re-declare the font + keep the glyph block
+      strictly left-aligned and never wrapped.
+   ========================================================================== */
+
+@font-face {
+	font-family: "star";
+	src: url("../../../../plugins/woocommerce/assets/fonts/star.woff") format("woff"),
+		url("../../../../plugins/woocommerce/assets/fonts/star.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+.widget.woocommerce .star-rating,
+.widget-area .star-rating {
+	float: none !important;
+	display: inline-block !important;
+	vertical-align: middle;
+	position: relative;
+	height: 1em;
+	line-height: 1;
+	width: 5.4em;
+	font-family: "star", "WooCommerce";
+	font-size: 1em;
+	color: #ffb100;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.widget.woocommerce .star-rating::before {
+	content: "SSSSS";
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+	color: #cfc8d8;
+	letter-spacing: 0;
+}
+
+.widget.woocommerce .star-rating span {
+	overflow: hidden;
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+	padding-top: 1.5em;
+}
+
+.widget.woocommerce .star-rating span::before {
+	content: "SSSSS";
+	top: 0;
+	left: 0;
+	position: absolute;
+	letter-spacing: 0;
+}
+
+/* Rating filter rows: stars and "(4)" count on one tidy, left-aligned line */
+.widget.woocommerce .widget_rating_filter ul li {
+	padding: 4px 0;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.widget.woocommerce .widget_rating_filter ul li a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 0;
+	width: 100%;
+	line-height: 1.4;
+}
+
+.widget.woocommerce .widget_rating_filter ul li .star-rating {
+	flex: 0 0 auto;
+	margin: 0;
+}
+
+/* ==========================================================================
+   2. Product-list widgets (top rated / recent reviews / products / cart items)
+      Consistent thumbnail + text rows instead of broken floats.
+   ========================================================================== */
+
+.widget.woocommerce ul.product_list_widget li,
+.widget.woocommerce ul.cart_list li {
+	position: relative;
+	display: grid !important;
+	grid-template-columns: 48px minmax(0, 1fr) auto;
+	grid-template-areas:
+		"img  title price"
+		"img  stars price";
+	align-items: start;
+	column-gap: 10px;
+	row-gap: 2px;
+	padding: 10px 0 !important;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.widget.woocommerce ul.product_list_widget li:last-child,
+.widget.woocommerce ul.cart_list li:last-child {
+	border-bottom: 0;
+}
+
+/* Column 1 – thumbnail */
+.widget.woocommerce ul.product_list_widget li img,
+.widget.woocommerce ul.cart_list li img {
+	grid-area: img;
+	float: none !important;
+	width: 48px !important;
+	height: 48px !important;
+	object-fit: cover;
+	border-radius: 6px;
+	margin: 0 !important;
+	box-shadow: none;
+}
+
+/* Column 2, row 1 – title (the <a> wraps img + title; img is pulled into col 1) */
+.widget.woocommerce ul.product_list_widget li > a,
+.widget.woocommerce ul.cart_list li > a {
+	display: contents !important;
+}
+
+.widget.woocommerce ul.product_list_widget li .product-title,
+.widget.woocommerce ul.cart_list li .product-title {
+	grid-area: title;
+	display: block;
+	font-weight: 500;
+	line-height: 1.35;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+/* Column 2, row 2 – star rating on its own line, under the title, left-aligned */
+.widget.woocommerce ul.product_list_widget li .star-rating {
+	grid-area: stars;
+	display: inline-block !important;
+	width: 5.4em !important;
+	max-width: 100%;
+	margin: 2px 0 0 !important;
+	float: none !important;
+	vertical-align: middle;
+}
+
+/* Column 3 – price, right-aligned, vertically centered against the two rows */
+.widget.woocommerce ul.product_list_widget li .woocommerce-Price-amount,
+.widget.woocommerce ul.cart_list li .woocommerce-Price-amount,
+.widget.woocommerce ul.product_list_widget li del,
+.widget.woocommerce ul.product_list_widget li ins {
+	float: none !important;
+}
+
+/* Price column (col 3), right-aligned, top-aligned with the title.
+   Each price part is its own grid item, so they MUST get separate rows
+   or they paint on top of each other:
+   - sale products  : del (row 1, struck-through) + ins (row 2, active price)
+   - regular products: single direct .woocommerce-Price-amount spanning both rows */
+.widget.woocommerce ul.product_list_widget li del,
+.widget.woocommerce ul.product_list_widget li ins,
+.widget.woocommerce ul.product_list_widget li > .woocommerce-Price-amount,
+.widget.woocommerce ul.cart_list li > .woocommerce-Price-amount {
+	grid-column: 3;
+	text-align: right;
+	white-space: nowrap;
+	display: block;
+	align-self: start;
+}
+
+.widget.woocommerce ul.product_list_widget li del {
+	grid-row: 1;
+	opacity: 0.55;
+	margin: 0 0 2px;
+}
+
+.widget.woocommerce ul.product_list_widget li ins {
+	grid-row: 2;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.widget.woocommerce ul.product_list_widget li > .woocommerce-Price-amount,
+.widget.woocommerce ul.cart_list li > .woocommerce-Price-amount {
+	grid-row: 1 / span 2;
+	align-self: center;
+}
+
+/* Recent reviews: reviewer name on its OWN row (row 3), never overlapping stars */
+.widget.woocommerce ul.product_list_widget li .reviewer {
+	grid-column: 2;
+	grid-row: 3;
+	display: block;
+	font-weight: 400;
+	font-size: 0.85em;
+	opacity: 0.8;
+	margin-top: 2px;
+}
+
+
+/* ==========================================================================
+   3. Shopping cart widget – remove (×) button + View cart / Checkout buttons
+   ========================================================================== */
+
+/* Cart rows need room for the absolute remove button */
+.widget.woocommerce .widget_shopping_cart .cart_list li,
+.widget.woocommerce.widget_shopping_cart .cart_list li {
+	padding-left: 0 !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+}
+
+/* The × button: small circle, vertically centered on the row */
+.widget.woocommerce .widget_shopping_cart .cart_list li a.remove,
+.widget.woocommerce.widget_shopping_cart .cart_list li a.remove {
+	position: static !important;
+	flex: 0 0 auto;
+	align-self: center;
+	order: 3; /* keep × as the LAST element of the row */
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	width: 16px !important;
+	height: 16px !important;
+	margin: 0 0 0 8px !important;
+	font-size: 11px !important;
+	line-height: 1 !important;
+	border-radius: 50%;
+}
+
+.widget.woocommerce .widget_shopping_cart .cart_list li a.remove:hover,
+.widget.woocommerce.widget_shopping_cart .cart_list li a.remove:hover {
+	background: var(--wc-red, #d63638);
+	color: #fff !important;
+}
+
+/* Total row */
+.widget.woocommerce .widget_shopping_cart .total,
+.widget.woocommerce.widget_shopping_cart .total {
+	margin-top: 10px;
+	padding: 10px 0 0 !important;
+	border-top: 2px solid rgba(0, 0, 0, 0.08);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.widget.woocommerce .widget_shopping_cart .total strong,
+.widget.woocommerce.widget_shopping_cart .total strong {
+	min-width: 0;
+}
+
+/* Cart item rows: [img+name] … [qty × price] [×] — quantity & price right-aligned.
+   High-specificity selector overrides theme.min.css
+   (.widget_shopping_cart .woocommerce-mini-cart li.woocommerce-mini-cart-item.mini_cart_item → (0,4,1)
+   which forces padding:10px on all sides). */
+.widget.woocommerce .widget_shopping_cart .woocommerce-mini-cart li.woocommerce-mini-cart-item,
+.widget.woocommerce .widget_shopping_cart .woocommerce-mini-cart li.mini_cart_item,
+.widget.woocommerce.widget_shopping_cart .cart_list li.mini_cart_item {
+	display: flex !important;
+	flex-wrap: nowrap;
+	align-items: center !important;
+	gap: 8px;
+	padding: 10px 0 !important;
+}
+
+/* Link (thumbnail + name) takes the remaining space; theme forces img margin-left:20px */
+.widget.woocommerce .widget_shopping_cart .cart_list li > a:not(.remove),
+.widget.woocommerce.widget_shopping_cart .cart_list li > a:not(.remove) {
+	flex: 1 1 auto !important;
+	min-width: 0;
+	margin-left: 0 !important;
+	gap: 8px;
+}
+
+/* Thumbnail — specificity must beat theme.min.css
+   (.widget_shopping_cart .woocommerce-mini-cart li.woocommerce-mini-cart-item.mini_cart_item a img → (0,4,3)),
+   otherwise its margin-left:20px/width:60px wins over our reset. */
+.widget.woocommerce .widget_shopping_cart .cart_list li img,
+.widget.woocommerce .widget_shopping_cart .woocommerce-mini-cart li.woocommerce-mini-cart-item a img,
+.widget.woocommerce .widget_shopping_cart .cart_list li.mini_cart_item a img,
+.widget.woocommerce.widget_shopping_cart .cart_list li img {
+	flex: 0 0 40px;
+	width: 40px !important;
+	height: 40px !important;
+	margin-left: 0 !important; /* undo theme's margin-left:20px */
+	object-fit: cover;
+	border-radius: 6px;
+}
+
+/* "2 × $18.00" — pinned to the right edge, single row, no wrapping */
+.widget.woocommerce .widget_shopping_cart .cart_list li .quantity,
+.widget.woocommerce.widget_shopping_cart .cart_list li .quantity {
+	flex: 0 0 auto !important;
+	margin-left: auto !important;
+	text-align: right !important;
+	white-space: nowrap;
+	line-height: 1.35;
+}
+
+/* Inside the quantity line: qty × price stays on one line; when a product is
+   on sale WooCommerce prints del + ins stacked — right-align those too. */
+.widget.woocommerce .widget_shopping_cart .cart_list li .quantity .woocommerce-Price-amount,
+.widget.woocommerce .widget_shopping_cart .cart_list li .quantity del,
+.widget.woocommerce .widget_shopping_cart .cart_list li .quantity ins {
+	display: inline !important;
+	float: none !important;
+}
+
+.widget.woocommerce .widget_shopping_cart .cart_list li .quantity del {
+	display: block !important;
+	text-align: right;
+	opacity: 0.55;
+}
+
+.widget.woocommerce .widget_shopping_cart .cart_list li .quantity ins {
+	display: block !important;
+	text-align: right;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+/* Variations / item data under the name */
+.widget.woocommerce .widget_shopping_cart .cart_list li dl {
+	display: none; /* keep rows compact */
+}
+
+/* View cart / Checkout buttons: two tidy, equally split buttons */
+.widget.woocommerce .widget_shopping_cart .buttons,
+.widget.woocommerce.widget_shopping_cart .buttons {
+	display: flex;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.widget.woocommerce .widget_shopping_cart .buttons::before,
+.widget.woocommerce .widget_shopping_cart .buttons::after,
+.widget.woocommerce.widget_shopping_cart .buttons::before,
+.widget.woocommerce.widget_shopping_cart .buttons::after {
+	display: none !important;
+}
+
+.widget.woocommerce .widget_shopping_cart .buttons a,
+.widget.woocommerce.widget_shopping_cart .buttons a {
+	flex: 1 1 50% !important;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 0 !important;
+	padding: 10px 12px;
+	border-radius: var(--btnradius, 4px);
+	white-space: nowrap;
+}
+
+/* ==========================================================================
+   4. Layered nav (attribute filter) + brand layered nav
+   ========================================================================== */
+
+.widget.woocommerce .woocommerce-widget-layered-nav-list li,
+.widget.woocommerce .wc-brand-list-layered-nav-product_brand li,
+.widget.woocommerce .widget_layered_nav ul li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 5px 0 !important;
+	line-height: 1.4;
+}
+
+.widget.woocommerce .woocommerce-widget-layered-nav-list li a,
+.widget.woocommerce .wc-brand-list-layered-nav-product_brand li a,
+.widget.woocommerce .widget_layered_nav ul li a {
+	flex: 1 1 auto;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.widget.woocommerce .woocommerce-widget-layered-nav-list li .count,
+.widget.woocommerce .wc-brand-list-layered-nav-product_brand li .count,
+.widget.woocommerce .widget_layered_nav ul li .count {
+	flex: 0 0 auto;
+	opacity: 0.65;
+	font-size: 0.85em;
+	white-space: nowrap;
+}
+
+/* "chosen" state: small accent + bold */
+.widget.woocommerce .woocommerce-widget-layered-nav-list li.wc-layered-nav-chosen a,
+.widget.woocommerce .wc-brand-list-layered-nav-product_brand li.chosen a,
+.widget.woocommerce .widget_layered_nav ul li.chosen a {
+	font-weight: 700;
+}
+
+.widget.woocommerce .woocommerce-widget-layered-nav-list li.wc-layered-nav-chosen a::before,
+.widget.woocommerce .wc-brand-list-layered-nav-product_brand li.chosen a::before,
+.widget.woocommerce .widget_layered_nav ul li.chosen a::before {
+	content: "×";
+	margin-right: 6px;
+	font-weight: 700;
+}
+
+/* ==========================================================================
+   5. Brand thumbnails – restore one-per-row for columns-1 on all viewports
+      (brands.css forces 2-up on mobile with !important)
+   ========================================================================== */
+
+/* Columns 2-6 and fluid columns must keep WooCommerce brands.css grid rules.
+   Only force one-per-row when the widget is set to 1 column (or the unset
+   default, which resolves to `columns-1`). */
+.widget.widget_brand_thumbnails ul.brand-thumbnails.columns-1 li {
+	float: none !important;
+	width: 100% !important;
+	margin: 0 0 12px 0 !important;
+	clear: both !important;
+}
+.widget.widget_brand_thumbnails ul.brand-thumbnails.fluid-columns li {
+	float: left !important;
+	width: auto !important;
+	margin: 0 12px 12px 0 !important;
+	clear: none !important;
+}
+.widget.widget_brand_thumbnails ul.brand-thumbnails.fluid-columns li .brand-thumbnail {
+	width: auto !important;
+	height: auto !important;
+	aspect-ratio: auto !important;
+}
+
+.widget.widget_brand_thumbnails ul.brand-thumbnails li a {
+	display: block;
+}
+
+.widget.widget_brand_thumbnails .brand-thumbnail {
+	display: block;
+	width: 100% !important;
+	height: auto !important;
+	border-radius: 8px;
+	object-fit: cover;
+	aspect-ratio: 3 / 1; /* wide banner-ish thumbnails, keeps rows tidy */
+}
+
+/* Restore the float clearfix: brands.css clears the floated thumbnail rows
+   with these pseudo-elements. Disabling them collapses the <ul> to zero
+   height (all <li> are floated), so the next widget in the sidebar (e.g. the
+   cart) starts on top of the floating thumbnails. */
+.widget.widget_brand_thumbnails ul.brand-thumbnails::before,
+.widget.widget_brand_thumbnails ul.brand-thumbnails::after {
+	content: "" !important;
+	display: table !important;
+	clear: both !important;
+}
+
+/* ==========================================================================
+   6. Product search widget – input + button on one row
+   ========================================================================== */
+
+.widget.woocommerce .woocommerce-product-search {
+	display: flex;
+	gap: 6px;
+}
+
+.widget.woocommerce .woocommerce-product-search .search-field {
+	flex: 1 1 auto;
+	min-width: 0;
+	width: auto !important;
+	margin: 0;
+}
+
+.widget.woocommerce .woocommerce-product-search button {
+	flex: 0 0 auto;
+	margin: 0;
+	padding: 8px 14px;
+	border: 0;
+	cursor: pointer;
+	border-radius: var(--btnradius, 4px);
+	background: var(--sol-color-link-button-initial, #2f6b3f);
+	color: #fff;
+	line-height: 1;
+}
+
+.widget.woocommerce .woocommerce-product-search button:hover {
+	background: var(--sol-color-link-button-hover, #24512f);
+}
+
+/* ==========================================================================
+   7. Price filter widget – button alignment
+   ========================================================================== */
+
+/* NOTE: `.widget_price_filter` lives on the SAME element as `.widget.woocommerce`
+   (WP renders one div: class="widget woocommerce widget_price_filter"), so a
+   descendant selector (`.widget.woocommerce .widget_price_filter`) never matches.
+   Every rule here needs the compound variant to win. */
+.widget.woocommerce .widget_price_filter .price_slider_amount,
+.widget.woocommerce.widget_price_filter .price_slider_amount {
+	text-align: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.widget.woocommerce .widget_price_filter .price_slider_amount .price_label,
+.widget.woocommerce.widget_price_filter .price_slider_amount .price_label {
+	display: inline !important;
+	margin-right: auto;
+}
+
+.widget.woocommerce .widget_price_filter .price_slider_amount .button,
+.widget.woocommerce.widget_price_filter .price_slider_amount .button {
+	float: none !important;
+	font-size: 0.9em !important;
+	line-height: 1.2 !important;
+	padding: 8px 14px;
+	margin: 0;
+}
+
+.widget.woocommerce .widget_price_filter .price_slider,
+.widget.woocommerce.widget_price_filter .price_slider {
+	margin: 0 0 12px;
+}
+
+.widget.woocommerce .widget_price_filter .price_slider_amount .clear,
+.widget.woocommerce.widget_price_filter .price_slider_amount .clear {
+	display: none;
+}
+
+/* ==========================================================================
+   8. Tag cloud – even pill spacing
+   ========================================================================== */
+
+.widget.woocommerce .tagcloud,
+.widget.widget_product_tag_cloud .tagcloud {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 0;
+}
+
+.widget.woocommerce .tagcloud a,
+.widget.widget_product_tag_cloud .tagcloud a {
+	display: inline-block;
+	font-size: 13px !important; /* override inline font-size attr for consistency */
+	line-height: 1;
+	padding: 6px 10px;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 999px;
+	text-decoration: none;
+}
+
+.widget.woocommerce .tagcloud a:hover,
+.widget.widget_product_tag_cloud .tagcloud a:hover {
+	border-color: var(--sol-color-link-button-initial, #2f6b3f);
+	color: var(--sol-color-link-button-initial, #2f6b3f);
+}
+
+/* ==========================================================================
+   9. Product categories widget – no stray indentation
+   ========================================================================== */
+
+.widget.woocommerce .widget_product_categories ul,
+.widget.woocommerce .product-categories {
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.widget.woocommerce .product-categories li {
+	padding: 5px 0;
+}
+
+.widget.woocommerce .product-categories li a {
+	text-decoration: none;
+}
+
+/* ==========================================================================
+   10. Small screens – sidebar always readable
+   ========================================================================== */
+
+@media (max-width: 960px) {
+	.widget.woocommerce .widget_shopping_cart .buttons a,
+	.widget.woocommerce.widget_shopping_cart .buttons a {
+		white-space: normal;
+	}
+}
+
+
+/* ==========================================================================
+   11. Product Tags Cloud – active tag font = button hover color
+       NOTE: chain `.widget.woocommerce.widget_product_tag_cloud` (same element,
+       no descendant space) so it matches; theme's `.tagcloud a` rule otherwise
+       keeps painting the active tag with its default pill background.
+       `--global-sol-color-button-hover` only exists in the Elementor editor;
+       the frontend equivalent is `--e-global-color-solcolorlinkbuttonhover`
+       (same value), so fall back to it.
+   ========================================================================== */
+
+.widget.woocommerce.widget_product_tag_cloud .tag-cloud-link.is-active {
+	background: transparent !important;
+	color: var(--global-sol-color-button-hover, var(--e-global-color-solcolorlinkbuttonhover)) !important;
+	border-color: var(--global-sol-color-button-hover, var(--e-global-color-solcolorlinkbuttonhover)) !important;
+}
+
+/* ==========================================================================
+   13. Product Categories – active category font = button hover color
+       WooCommerce marks the currently-viewed category with `current-cat`
+       (and ancestors with `current-cat-parent`) on the <li>.
+   ========================================================================== */
+
+.widget_product_categories .cat-item.current-cat > a,
+.widget_product_categories .cat-item.current-cat-parent > a {
+	background: transparent !important;
+	color: var(--global-sol-color-button-hover, var(--e-global-color-solcolorlinkbuttonhover)) !important;
+	font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   12. Cart widget – align product image flush left
+       (theme.min.css sets margin-left:20px !important on the thumbnail)
+       NOTE: chain `.widget.woocommerce.widget_shopping_cart` (one element, no
+       descendant space) so it matches; specificity (0,6,3) beats theme (0,4,3).
+   ========================================================================== */
+
+.widget.woocommerce.widget_shopping_cart .woocommerce-mini-cart li.woocommerce-mini-cart-item.mini_cart_item a img {
+	margin-left: 0 !important;
+}
+
+/* ==========================================================================
+   14. Product reviews (single product) – no list numbering, avatar aligned
+       with reviewer name / star rating
+       - theme.min.css global `ol li{list-style:decimal}` re-adds numbers to
+         ol.commentlist; reset it (WC plugin css sets list-style:none on the ol).
+       - WC plugin woocommerce.css positions the avatar absolute top:0, which
+         floats it above the review header; make it static and float it so it
+         sits level with the reviewer name + star rating row.
+   ========================================================================== */
+
+.woocommerce #reviews #comments ol.commentlist li {
+	list-style: none;
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+	position: static;
+	float: left;
+	top: auto;
+	left: auto;
+	margin: 0 15px 10px 0;
+}

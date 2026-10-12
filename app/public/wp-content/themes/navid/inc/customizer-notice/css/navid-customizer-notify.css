@@ -1,0 +1,197 @@
+/* Navid Customizer Notification Styles */
+
+.navid-customizer-plugin-notify-actions-count {
+    display: inline-block;
+    z-index: 26;
+    margin: 1px 0 0 2px;
+    padding: 0 6px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #d54e21;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 17px;
+    vertical-align: top;
+}
+
+div.navid-theme-recomended-actions_container {
+    margin-bottom: 1px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.navid-theme-recomended-actions_container p.succes {
+    margin: 1em 0;
+}
+
+.navid-epsilon-recommeded-actions p.title {
+    margin-bottom: 0;
+    color: #555d66;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navid-epsilon-recommeded-actions div.description {
+    font-size: 12px;
+}
+
+.navid-epsilon-recommeded-actions .custom-action {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #fafafa;
+}
+
+.navid-epsilon-recommeded-actions .custom-action p {
+    margin-top: 0;
+}
+
+.navid-theme-recomended-actions_container .navid-recommeded-actions-container:not(:first-child) {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+}
+
+.navid-theme-recomended-actions_container .navid-recommeded-actions-container:first-child {
+    height: auto;
+    opacity: 1;
+}
+
+.navid-theme-recomended-actions_container .navid-recommeded-actions-container {
+    -webkit-transition: opacity 2s;
+    /* Safari */
+    transition: opacity 2s;
+}
+
+.navid-theme-recomended-actions_container .hide {
+    display: none;
+}
+
+.navid-customizer-plugin-notify-actions-count.complete {
+    background-color: #79ba49;
+}
+
+.control-section-navid-customizer-notify-section .accordion-section-title:hover,
+.control-section-navid-customizer-notify-section .accordion-section-title:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+.control-section-navid-customizer-notify-section .accordion-section-title:after {
+    display: none !important;
+}
+
+/* Container styling - Minimal */
+.navid-theme-recomended-actions_container {
+    background: #fff !important;
+    padding: 15px !important;
+    border: none !important;
+    border-top: 1px solid #ddd !important;
+}
+
+.navid-recommeded-actions-container {
+    position: relative !important;
+}
+
+.navid-epsilon-recommeded-actions {
+    position: relative !important;
+}
+
+.navid-epsilon-recommeded-actions .title {
+    color: #333 !important;
+    font-weight: 500 !important;
+    margin: 0 0 8px 0 !important;
+    font-size: 13px !important;
+}
+
+.navid-epsilon-recommeded-actions .description {
+    color: #666 !important;
+    margin: 0 0 12px 0 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+
+/* Dismiss button - Minimal */
+.navid-customizer-notify-dismiss-button-recommended-plugin {
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    color: #999 !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    width: 16px !important;
+    height: 16px !important;
+    background: none !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.navid-customizer-notify-dismiss-button-recommended-plugin:hover {
+    color: #666 !important;
+}
+
+/* Action button */
+.action_button {
+    margin: 0 !important;
+}
+
+.activate-now,
+.install-now {
+    background: #728c69 !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 8px 24px !important;
+    border-radius: 0 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    display: inline-block !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease;
+    line-height: 1.2 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.activate-now:hover,
+.activate-now:focus,
+.install-now:hover,
+.install-now:focus {
+    background: #617a59 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+/* Minimal plugin notice styling */
+.control-section-navid-customizer-notify-section {
+    border: 1px solid #728c69 !important;
+    background: #fff !important;
+    color: #333 !important;
+    margin-bottom: 10px !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+.control-section-navid-customizer-notify-section .accordion-section-title {
+    background: #728c69 !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 12px 15px !important;
+    font-weight: 600 !important;
+    cursor: default !important;
+    font-size: 14px !important;
+    letter-spacing: 0.02em;
+}
+
+.control-section-navid-customizer-notify-section .accordion-section-title:hover,
+.control-section-navid-customizer-notify-section .accordion-section-title:focus {
+    background: #617a59 !important;
+    color: #fff !important;
+}
+
+.control-section-navid-customizer-notify-section .accordion-section-title:after {
+    display: none !important;
+}

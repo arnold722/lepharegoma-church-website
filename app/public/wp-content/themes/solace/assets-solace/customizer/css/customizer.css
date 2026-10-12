@@ -1,0 +1,804 @@
+span.dashicon.dashicons.dashicons-search {
+    color: var(--sol-customizer-bg-color);
+    background-color: var(--sol-customizer-icon-color);
+    width: 11px !important;
+    height: 11px !important;
+    border-radius: 100px;
+}
+span.dashicon.dashicons.dashicons-search::before {
+    font-size: 10px;
+}
+
+.accordion-section-title #solace-customize-search {
+    top: 11px;
+    right: 33px;
+}
+
+button.customize-partial-edit-shortcut-button {
+    display: none;
+}
+
+#customize-controls .control-section .accordion-section-title button:hover,
+#customize-controls .control-section .accordion-section-title button:focus {
+    background: none;
+    border: none;
+}
+
+#customize-controls .customize-info .customize-help-toggle:focus:before,
+.wp-core-ui #customize-controls .customize-info .customize-help-toggle:focus:before {
+    box-shadow: none;
+}
+
+button.customize-help-toggle.dashicons.dashicons-editor-help {
+    color: var(--sol-customizer-icon-color) !important;
+}
+
+.solace-fonts-list .dropdown-font-list span {
+    color: #fff;
+}
+.solace-fonts-list a.dropdown-font-list:hover {
+    background-color: #f6f7f7;
+}
+.solace-fonts-list a.dropdown-font-list:hover span {
+    color: #3858e9;
+}
+
+.components-popover .components-popover__content a.dropdown-font-list:hover {
+    background-color: #f6f7f7;
+}
+
+.components-popover .components-popover__content a.dropdown-font-list {
+    background: var(--sol-customizer-panel-bg-color);
+    border-bottom: 1px solid var(--sol-customizer-border-color);
+}
+
+ul.customize-pane-child.open .range-slider span {
+    display: flex;
+    align-items: center;
+}    
+
+.sortable {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sortable input[type="text"],
+.sortable select {
+	margin: 5px 5px 5px 0;
+	width: 80%;
+}
+
+.sortable div {
+	cursor: move;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.customize-control-sortable-repeater-delete {
+	color: #d4d4d4;
+}
+
+.customize-control-sortable-repeater-delete:hover {
+	color: #f00;
+}
+
+.customize-control-sortable-repeater-delete .dashicons-no-alt {
+	text-decoration: none;
+	margin: 8px 0 0 0;
+	font-weight: 600;
+}
+
+.customize-control-sortable-repeater-delete:active,
+.customize-control-sortable-repeater-delete:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.repeater .dashicons-sort {
+	margin: 8px 5px 0 5px;
+	color: #d4d4d4;
+}
+
+.repeater .dashicons-sort svg {
+	width: 20px;
+	height: 20px;
+	fill: white;
+}
+
+.repeater .dashicons-sort::before {
+	content: none;
+}
+
+.repeater .dashicons-sort:hover {
+	color: #a7a7a7;
+}
+
+#customize-theme-controls .customize-pane-parent>.control-section .accordion-section-title {
+    padding-left: 50px;
+    padding-right: 0;
+}
+
+#sub-accordion-section-solace_core_site_identity .customize-control:not(#customize-control-logo_tabs_default) {
+    display: block !important;
+}
+
+#accordion-section-solace_test_2.hide,
+#accordion-section-solace_colors_background_section.hide,
+#accordion-section-solace_typography_headings.hide,
+#accordion-section-solace_wc_custom_general_buttons.hide,
+#accordion-section-solace_features_scroll_to_top.hide,
+#accordion-section-solace_container.hide,
+#accordion-section-sidebar_sidebar.hide,
+#accordion-section-solace_blog_archive_layout.hide,
+#accordion-section-solace_single_post_layout.hide,
+#accordion-section-solace_single_blog-post_layout.hide,
+#accordion-section-solace_single_page_layout.hide,
+#accordion-panel-solace_wc_custom_general.hide,
+#accordion-section-solace_wc_custom_general_cart_pages.hide,
+#accordion-section-solace_wc_custom_general_checkout.hide,
+#accordion-section-solace_wc_custom_general_account.hide,
+#accordion-section-solace_wc_product_page.hide,
+#accordion-section-solace_wc_single_product.hide,
+#accordion-panel-solace_panel_wc_product_page.hide,
+#accordion-panel-solace_wc_custom_single_product.hide {
+   
+    overflow: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
+    display: none !important;    
+}
+#accordion-panel-widgets.hide,
+#accordion-section-solace_core_site_identity.hide,
+#accordion-panel-nav_menus.hide,
+#accordion-section-solace_core_homepage.hide,
+#accordion-panel-woocommerce,
+#accordion-section-custom_css.hide {
+    overflow: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
+    display: none !important;    
+}
+
+#accordion-section-solace_test_2,
+#accordion-section-solace_colors_background_section,
+#accordion-section-solace_typography_headings,
+#accordion-section-solace_wc_custom_general_buttons,
+#accordion-section-solace_features_scroll_to_top,
+#accordion-section-solace_container,
+#accordion-section-solace_blog_archive_layout,
+#accordion-section-solace_single_post_layout,
+#accordion-section-solace_single_blog-post_layout,
+#accordion-section-solace_single_page_layout,
+#accordion-panel-solace_wc_custom_general,
+#accordion-section-solace_wc_custom_general_cart_pages,
+#accordion-section-solace_wc_custom_general_checkout,
+#accordion-section-solace_wc_custom_general_account,
+#accordion-section-solace_wc_product_page,
+#accordion-section-solace_wc_single_product,
+#accordion-panel-solace_panel_wc_product_page,
+#accordion-panel-solace_wc_custom_single_product {
+    transition: all .3s ease-out;
+    display: list-item !important;
+    
+}
+#solace-customize-search-results .accordion-section {
+    background: var(--sol-customizer-panel-bg-color) !important;
+}
+
+.accordion-section-title #solace-customize-search {
+    position: absolute;
+    top: 11px;
+    right: 30px;
+    width: 28px;
+    height: 28px;
+    background: var(--sol-customizer-panel-bg-color);
+    border-radius: 100%;
+}
+
+span.dashicon.dashicons.dashicons-search::before {
+    font-size: 11px;
+    position: relative;
+    right: .5px;
+}
+
+#solace-customize-search-results .accordion-section h3.accordion-section-title {
+    color: #fff;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+#solace-customize-search-results .accordion-section h3 {
+    background-color: var(--sol-customizer-line-color);
+}
+
+
+#accordion-panel-widgets,
+#accordion-section-solace_core_site_identity,
+#accordion-panel-nav_menus,
+#accordion-section-solace_core_homepage,
+#accordion-section-custom_css {
+    transition: all .3s ease-out;
+    display: list-item !important;
+}
+
+#accordion-section-solace_colors_background_section .accordion-section-title,
+#accordion-section-solace_typography_headings .accordion-section-title,
+#accordion-section-solace_wc_custom_general_buttons .accordion-section-title,
+#accordion-section-solace_features_scroll_to_top .accordion-section-title,
+#accordion-section-solace_single_page_layout .accordion-section-title,
+#accordion-section-solace_container .accordion-section-title,
+#accordion-section-solace_sidebar .accordion-section-title,
+#accordion-section-solace_blog_archive_layout .accordion-section-title,
+#accordion-section-solace_single_post_layout .accordion-section-title,
+#accordion-section-solace_single_blog-post_layout .accordion-section-title,
+#accordion-panel-solace_wc_custom_general .accordion-section-title,
+#accordion-section-solace_wc_custom_general_cart_pages .accordion-section-title,
+#accordion-section-solace_wc_custom_general_checkout .accordion-section-title,
+#accordion-section-solace_wc_custom_general_account .accordion-section-title,
+#accordion-section-solace_wc_product_page .accordion-section-title,
+#accordion-section-solace_wc_single_product .accordion-section-title,
+#accordion-panel-solace_panel_wc_product_page .accordion-section-title,
+#accordion-panel-solace_wc_custom_single_product .accordion-section-title,
+#accordion-section-solace_typography_headings .accordion-section-title,
+#accordion-section-solace_single_page_layout .accordion-section-title,
+#accordion-panel-widgets .accordion-section-title,
+#accordion-section-solace_core_site_identity .accordion-section-title,
+#accordion-panel-nav_menus .accordion-section-title,
+#accordion-section-solace_core_homepage .accordion-section-title,
+#accordion-section-custom_css .accordion-section-title {
+    border-bottom: 1px solid #0F2E5F !important;
+    margin-right: 30px  !important;
+    margin-left: 30px !important;
+    padding: 0 !important;
+}
+
+#accordion-section-solace_colors_background_section .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_typography_headings .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_wc_custom_general_buttons .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_features_scroll_to_top .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_single_page_layout .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_container .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_sidebar .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_blog_archive_layout .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_single_post_layout .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_single_blog-post_layout .accordion-section-title button.accordion-trigger,
+#accordion-panel-solace_wc_custom_general .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_wc_product_page .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_wc_single_product .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_wc_custom_general_cart_pages .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_wc_custom_general_checkout .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_wc_custom_general_account .accordion-section-title button.accordion-trigger,
+#accordion-panel-solace_panel_wc_product_page .accordion-section-title button.accordion-trigger,
+#accordion-panel-solace_wc_custom_single_product .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_typography_headings .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_single_page_layout .accordion-section-title button.accordion-trigger,
+#accordion-panel-widgets .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_core_site_identity .accordion-section-title button.accordion-trigger,
+#accordion-panel-nav_menus .accordion-section-title button.accordion-trigger,
+#accordion-section-solace_core_homepage .accordion-section-title button.accordion-trigger,
+#accordion-section-custom_css .accordion-section-title button.accordion-trigger {
+    padding: 12px 40px !important;
+}
+
+.customize-pane-parent {
+    overflow: hidden !important;
+}
+
+#customize-controls #accordion-section-solace_page_settings .accordion-section-title::before {
+    content: url(../../../assets/img/customizer/sol-icon-page-settings.svg);
+}
+#customize-theme-controls .customize-pane-parent>.control-section .accordion-section-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin:0;
+}
+#customize-controls #accordion-section-solace_general_options,
+#customize-controls #accordion-section-solace_page_settings,
+#customize-controls #accordion-panel-hfg_header,
+#customize-controls #accordion-panel-hfg_footer,
+#customize-controls #accordion-panel-solace_wc_custom,
+#customize-controls #accordion-panel-woocommerce,
+#customize-controls #accordion-section-solace_core_options {
+	position: relative;
+	margin-bottom: 15px;
+    background-color: var(--sol-customizer-panel-bg-color);
+    color: var(--sol-customizer-text-color);
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+#customize-controls #accordion-section-solace_general_options:hover::after,
+#customize-controls #accordion-section-solace_page_settings:hover::after,
+#customize-controls #accordion-panel-hfg_header:hover::after,
+#customize-controls #accordion-panel-hfg_footer:hover::after,
+#customize-controls #accordion-panel-solace_wc_custom:hover::after,
+#customize-controls #accordion-section-solace_core_options:hover::after {
+    color: var(--sol-customizer-panel-bg-color);
+}
+
+#customize-controls #accordion-section-solace_general_options.up:hover::after,
+#customize-controls #accordion-section-solace_page_settings.up:hover::after,
+#customize-controls #accordion-section-solace_core_options.up:hover::after,
+#customize-controls #accordion-section-solace_general_options.down:hover::after,
+#customize-controls #accordion-section-solace_page_settings.down:hover::after,
+#customize-controls #accordion-section-solace_core_options.down:hover::after,
+#customize-controls #accordion-panel-solace_wc_custom.up:hover::after,
+#customize-controls #accordion-panel-solace_wc_custom.down:hover::after {
+    color: var(--sol-customizer-panel-bg-color);
+}
+
+#customize-controls #accordion-section-solace_general_options.up::after,
+#customize-controls #accordion-section-solace_page_settings.up::after,
+#customize-controls #accordion-panel-solace_wc_custom.up::after,
+#customize-controls #accordion-panel-solace_wc_custom.up::after,
+#customize-controls #accordion-panel-solace_wc_custom.up::after,
+#customize-controls #accordion-section-solace_core_options.up::after {
+    content: '\f343';
+    font: normal 20px/1 'dashicons';
+	color: #fff;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	width: 95%;
+    left:3px;
+    padding-top: 15px;
+    padding-right: 20px;
+	text-align: right;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: all 0.2s;
+    cursor: pointer;
+}
+
+/* #customize-controls li#accordion-section-solace_typography_headings, */
+#customize-controls li#accordion-section-solace_single_page_layout,
+#customize-controls li#accordion-section-solace_features_scroll_to_top {
+    margin-bottom: 15px;
+}
+
+#customize-controls #accordion-section-solace_general_options::after,
+#customize-controls #accordion-section-solace_page_settings::after,
+#customize-controls #accordion-panel-solace_wc_custom::after,
+#customize-controls #accordion-section-solace_core_options::after {
+	/* content: '\f140'; */
+    /* content: '\f345'; */
+    all: unset;
+    content: '\f347';
+	font: normal 20px/1 'dashicons';
+	color: #fff;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	width: 95%;
+    left:3px;
+    padding-top: 15px;
+    padding-right: 20px;
+	text-align: right;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: all 0.2s;
+    cursor: pointer;
+}
+
+#customize-controls #accordion-panel-hfg_header::after,
+#customize-controls #accordion-panel-hfg_footer::after {
+	color: #fff;   
+}
+
+.accordion-section-title:after, .control-section .accordion-section-title::after {
+    display: none;
+}
+
+#accordion-section-solace_colors_background_section .accordion-section-title::before,
+#accordion-section-solace_typography_headings .accordion-section-title::before,
+#accordion-section-solace_wc_custom_general_buttons .accordion-section-title::before,
+#accordion-section-solace_features_scroll_to_top .accordion-section-title::before,
+#accordion-section-solace_container .accordion-section-title::before,
+#accordion-section-solace_sidebar .accordion-section-title::before,
+#accordion-section-solace_blog_archive_layout .accordion-section-title::before,
+#accordion-section-solace_single_post_layout .accordion-section-title::before,
+#accordion-section-solace_single_blog-post_layout .accordion-section-title::before,
+#accordion-section-solace_single_page_layout .accordion-section-title::before,
+#accordion-panel-solace_wc_custom_general .accordion-section-title::before,
+#accordion-section-solace_wc_custom_general_cart_pages .accordion-section-title::before,
+#accordion-section-solace_wc_custom_general_checkout .accordion-section-title::before,
+#accordion-section-solace_wc_custom_general_account .accordion-section-title::before,
+#accordion-section-solace_wc_product_page .accordion-section-title::before,
+#accordion-section-solace_wc_single_product .accordion-section-title::before,
+#accordion-panel-solace_panel_wc_product_page .accordion-section-title::before,
+#accordion-panel-solace_wc_custom_single_product .accordion-section-title::before{
+    content: "" !important;
+}
+
+#accordion-panel-widgets .accordion-section-title::before,
+#accordion-section-solace_core_site_identity .accordion-section-title::before,
+#accordion-panel-nav_menus .accordion-section-title::before,
+#accordion-section-solace_core_homepage .accordion-section-title::before,
+#accordion-section-custom_css .accordion-section-title::before {
+    content: "" !important;
+}
+
+
+#accordion-section-solace_colors_background_section .accordion-section-title,
+#accordion-section-solace_typography_headings .accordion-section-title,
+#accordion-section-solace_wc_custom_general_buttons .accordion-section-title,
+#accordion-section-solace_features_scroll_to_top .accordion-section-title,
+#accordion-section-solace_container .accordion-section-title,
+#accordion-section-solace_sidebar .accordion-section-title,
+#accordion-section-solace_blog_archive_layout .accordion-section-title,
+#accordion-section-solace_single_post_layout .accordion-section-title,
+#accordion-section-solace_single_blog-post_layout.accordion-section-title,
+#accordion-section-solace_single_page_layout .accordion-section-title,
+#accordion-panel-solace_wc_custom_general .accordion-section-title,
+#accordion-section-solace_wc_custom_general_cart_pages .accordion-section-title,
+#accordion-section-solace_wc_custom_general_checkout .accordion-section-title,
+#accordion-section-solace_wc_custom_general_account .accordion-section-title,
+#accordion-section-solace_wc_product_page .accordion-section-title,
+#accordion-section-solace_wc_single_product .accordion-section-title,
+#accordion-panel-solace_panel_wc_product_page .accordion-section-title,
+#accordion-panel-solace_wc_custom_single_product .accordion-section-title {
+    background-color: transparent;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+
+#accordion-panel-widgets .accordion-section-title,
+#accordion-section-solace_core_site_identity .accordion-section-title,
+#accordion-panel-nav_menus .accordion-section-title,
+#accordion-section-solace_core_homepage .accordion-section-title,
+#accordion-section-custom_css .accordion-section-title {
+    background-color: transparent;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+.wp-customizer #screen-options-wrap {
+    background: var(--sol-customizer-bg-color);
+}
+
+/* CSS FOR LOGO & SITE IDENTITY */
+#customize-control-logo_tabs {
+    display: none !important;
+}
+li#customize-control-blogname {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li#customize-control-blogname .customize-control-title {
+    flex-basis: 88%;
+}
+li#customize-control-solace_pro_global_header_settings_top_shortcut label,
+li#customize-control-solace_pro_global_header_settings_main_shortcut label,
+li#customize-control-solace_pro_global_header_settings_bottom_shortcut label,
+li#customize-control-logo_show_title label,
+li#customize-control-logo_display span.customize-control-title,
+li#customize-control-logo_max_width span.customize-control-title {
+    font-size: 18px;
+}
+
+li#customize-control-blogname input#_customize-input-blogname {
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+li#customize-control-logo_show_title .components-flex {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+li#customize-control-solace_pro_global_header_settings_top_shortcut,
+li#customize-control-solace_pro_global_header_settings_main_shortcut,
+li#customize-control-solace_pro_global_header_settings_bottom_shortcut {
+    display: none;
+
+}
+
+li#customize-control-blogname {
+    display: none !important;
+}
+div.solace-white-background-control {
+    background: var(--sol-customizer-panel-border-color);
+}
+
+li#customize-control-logo_display,
+li#customize-control-blogname,
+li#customize-control-logo_show_title {
+    border-bottom: 1px solid var(--sol-customizer-panel-bg-color);
+    padding-bottom: 22px;
+}
+
+/* CSS LOGO STYLE FOR ELEMENT LOGO & SITE IDENTITY*/
+
+li#customize-control-logo_display button {
+    padding:0 !important;
+    background-color: transparent !important;
+    border: none;
+}
+li#customize-control-logo_display .solace-radio-icons.large-buttons button svg {
+    width: 100%;
+}
+li#customize-control-logo_max_width .components-range-control__root {
+    flex-direction: row;
+    align-items: center;
+}
+li#customize-control-logo_max_width .components-range-control__root .components-number-control {
+    margin-left: 0px !important;
+    border-radius: 15px;
+}
+li#customize-control-logo_max_width .components-range-control__root .components-number-control .components-input-control__container {
+    justify-content: center;
+    margin-left: 5px;
+}
+li#customize-control-logo_max_width .components-flex {
+    border-radius: 20px;
+}
+
+li#customize-control-logo_display button.active svg path {
+    color: var(--sol-customizer-icon-color);
+}
+li#customize-control-logo_display button svg {
+    color: var(--sol-customizer-panel-bg-color);
+}
+
+.site-logo-footer img {
+    max-width: var(--maxwidthfooter);
+}
+
+/* CSS SEARCH ICON */
+
+#customize-control-header_search_responsive_toggle_icon .solace-radio-icons .components-button.has-icon.active {
+    background-color: var(--sol-customizer-icon-color)!important;
+}
+#customize-control-header_search_responsive_toggle_icon .solace-radio-icons .components-button.has-icon {
+    border-radius: 6px;
+    border: none;
+    margin: 0 12px 0 0;
+    background: #fff;
+}
+
+.widget-area p {
+    color: var(--color);
+}
+.sol_search_icon svg {
+    color: var(--color);
+    fill: var(--color);
+}
+#customize-control-header_search_responsive_placeholder,
+#customize-control-header_search_responsive_open_type,
+#customize-control-header_search_responsive_tabs .solace-tabs-control {
+    display: none !important;
+}
+
+/* CSS CART ICON */
+
+#customize-control-header_cart_icon_toggle_icon .solace-radio-icons .components-button.has-icon.active,
+#customize-control-footer_cart_icon_toggle_icon .solace-radio-icons .components-button.has-icon.active {
+    background-color: var(--sol-customizer-icon-color)!important;
+}
+#customize-control-header_cart_icon_toggle_icon .solace-radio-icons .components-button.has-icon,
+#customize-control-footer_cart_icon_toggle_icon .solace-radio-icons .components-button.has-icon {
+    border-radius: 6px;
+    border: none;
+    margin: 0 12px 0 0;
+    background: #fff;
+}
+#customize-control-header_cart_icon_toggle_icon .solace-radio-icons svg,
+#customize-control-footer_cart_icon_toggle_icon .solace-radio-icons svg {
+    width: 15px;
+}
+
+.sol_cart_icon svg {
+    color: var(--color);
+    fill: var(--color);
+    /* width: var(--iconsize);
+    height: auto; */
+}
+#customize-control-header_cart_icon_placeholder,
+#customize-control-header_cart_icon_open_type,
+#customize-control-header_cart_icon_tabs .solace-tabs-control,
+#customize-control-footer_cart_icon_placeholder,
+#customize-control-footer_cart_icon_open_type,
+#customize-control-footer_cart_icon_tabs .solace-tabs-control {
+    display: none !important;
+}
+
+/* CSS MENU ICON  */
+#customize-control-nav-icon_toggle_icon .solace-radio-icons .components-button.has-icon.active {
+    background-color: var(--sol-customizer-icon-color)!important;
+}
+#customize-control-nav-icon_toggle_icon .solace-radio-icons .components-button.has-icon {
+    border-radius: 6px;
+    border: none;
+    margin: 0 12px 0 0;
+    background: #fff;
+}
+
+.sol_menu_icon svg {
+    color: var(--color);
+    fill: var(--color);
+}
+#customize-control-nav-icon_placeholder,
+#customize-control-nav-icon_open_type,
+#customize-control-nav-icon_tabs .solace-tabs-control {
+    display: none !important;
+}
+
+#customize-control-nav-icon_button_appearance .customize-control-title {
+    display: none;
+}
+#customize-control-nav-icon_button_appearance .solace-responsive-sizing {
+    display: none;
+}
+#customize-control-nav-icon_button_appearance .components-panel {
+    background: transparent;
+}
+#customize-control-nav-icon_button_appearance .components-panel .customize-control-title {
+    display: block;
+}
+
+#customize-control-nav-icon_button_appearance button.components-button.is-text.active {
+    background: #FA9002 !important;
+    border-radius: 10px;
+}
+
+#customize-control-nav-icon_button_appearance button.components-button.is-text {
+    background: #0f2e5f !important;
+    border-radius: 10px;
+    color: white !important;
+}
+
+#customize-control-nav-icon_button_appearance .solace-radio-icons {
+    display: flex;
+    gap: 20px;
+    width: 50%;
+}
+#customize-control-nav-icon_button_appearance .solace-button-appearance-control .solace-radio-icons button {
+    height: 40px;
+}
+
+/* CSS STYLE FOR PAGE  */
+
+li#customize-control-solace_page_layout {
+    display: list-item !important;
+}
+
+/* CSS FOR PAGE LAYOUT */
+li#customize-control-solace_page_header_layout_heading,
+li#customize-control-solace_page_header_layout,
+li#customize-control-solace_page_cover_height,
+li#customize-control-solace_page_cover_padding,
+li#customize-control-solace_page_hide_title,
+li#customize-control-solace_page_title_position,
+li#customize-control-solace_page_cover_background_color,
+li#customize-control-solace_page_cover_text_color,
+li#customize-control-solace_page_cover_overlay_opacity,
+li#customize-control-solace_page_cover_hide_thumbnail,
+li#customize-control-solace_page_cover_blend_mode,
+li#customize-control-solace_page_cover_container,
+li#customize-control-solace_page_cover_title_boxed_layout,
+li#customize-control-solace_page_cover_title_boxed_padding,
+li#customize-control-solace_page_cover_title_boxed_background_color,
+li#customize-control-solace_page_title_alignment,
+li#accordion-section-solace_sidebar 
+{
+    display: none !important;
+}
+
+/* CSS STYLE FOR PAGE  */
+
+
+/* CSS FOR POST LAYOUT */
+li#customize-control-solace_post_header_layout_heading,
+li#customize-control-solace_post_cover_height,
+li#customize-control-solace_post_cover_padding,
+li#customize-control-solace_post_hide_title,
+li#customize-control-solace_post_title_position,
+li#customize-control-solace_post_cover_background_color,
+li#customize-control-solace_post_cover_text_color,
+li#customize-control-solace_post_cover_overlay_opacity,
+li#customize-control-solace_post_cover_hide_thumbnail,
+li#customize-control-solace_post_cover_blend_mode,
+li#customize-control-solace_post_cover_container,
+li#customize-control-solace_post_cover_title_boxed_layout,
+li#customize-control-solace_post_cover_title_boxed_padding,
+li#customize-control-solace_post_cover_title_boxed_background_color,
+li#customize-control-solace_post_title_alignment,
+li#customize-control-solace_post_page_elements_heading,
+li#customize-control-solace_post_meta_heading,
+li#customize-control-solace_post_comments_section_heading,
+li#customize-control-solace_post_comment_section_title,
+li#customize-control-solace_comments_boxed_layout,
+li#customize-control-solace_post_comments_form_heading,
+li#customize-control-solace_post_comment_form_title,
+li#customize-control-solace_post_comment_form_button_style,
+li#customize-control-solace_post_comment_form_button_text,
+li#customize-control-solace_comments_form_boxed_layout,
+li#customize-control-solace_comments_form_boxed_padding,
+li#customize-control-solace_comments_form_boxed_background_color,
+li#customize-control-solace_comments_form_boxed_text_color
+{
+    display: none;
+}
+
+li#customize-control-solace_post_cover_title_boxed_layout {
+    display: none !important;
+}
+
+li#customize-control-solace_container_width {
+    display: none;
+}
+
+li#customize-control-solace_container_page_width {
+    display: none;
+}
+
+#header-grid .solace-hide-row-top,
+#header-grid .solace-hide-row-main,
+#header-grid .solace-hide-row-bottom,
+#header-grid .solace_hide_row_main {
+    display: none;
+}
+
+.site-footer .solace-hide-row-top,
+.site-footer .solace-hide-row-main,
+.site-footer .solace-hide-row-bottom {
+    display: none;
+}  
+
+
+/* SOCIAL MEDIA  */
+li#customize-control-solace_layout_single_post_social_order .solace-sortable-item {
+    background-color:#0f2e5f;
+    border-color: #0f2e5f;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+li#customize-control-solace_layout_single_post_social_order .solace-sortable-item .toggle {
+    color:#FD9407;
+}
+
+li#customize-control-solace_layout_single_post_social_order .solace-sortable-item.disabled .toggle {
+    color: #597EAC;
+}
+
+li#customize-control-solace_archive_hide_title {
+    display: none;
+}
+
+li#customize-control-woocommerce_checkout_company_field button,
+li#customize-control-woocommerce_checkout_address_2_field button,
+li#customize-control-woocommerce_checkout_main_address_field button,
+li#customize-control-woocommerce_checkout_phone_field button {
+    display: none;
+}
+
+li#customize-control-woocommerce_checkout_company_field span,
+li#customize-control-woocommerce_checkout_address_2_field span,
+li#customize-control-woocommerce_checkout_main_address_field span,
+li#customize-control-woocommerce_checkout_phone_field span {
+    background-color: var(--sol-builder-row-tab-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+li#customize-control-woocommerce_checkout_company_field label.active span,
+li#customize-control-woocommerce_checkout_address_2_field label.active span,
+li#customize-control-woocommerce_checkout_main_address_field label.active span,
+li#customize-control-woocommerce_checkout_phone_field label.active span,
+li#customize-control-woocommerce_checkout_company_field label span:hover,
+li#customize-control-woocommerce_checkout_address_2_field label span:hover,
+li#customize-control-woocommerce_checkout_main_address_field label span:hover,
+li#customize-control-woocommerce_checkout_phone_field label span:hover {
+   background-color: var(--sol-builder-active-color);
+}
+
+li#customize-control-solace_blog_archive_layout [data-option=custom] #solace_blog_layout_custom_posts .count,
+li#customize-control-solace_blog_archive_layout [data-option=custom] #solace_blog_layout_custom_columns .count {
+    min-height: 30px;
+}

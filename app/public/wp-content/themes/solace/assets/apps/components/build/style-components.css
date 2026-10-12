@@ -1,0 +1,689 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/apps/components/src/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.solace-background-control input[type=number] {
+  padding-right: 0 !important;
+  border-color: #ccc;
+  border-radius: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.solace-background-control .components-color-picker__inputs-toggle {
+  margin-left: auto;
+}
+.solace-background-control .components-tooltip.components-popover {
+  display: none !important;
+}
+.solace-background-control .components-color-picker__inputs-field {
+  margin: 0;
+}
+.solace-background-control .components-color-picker__inputs-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+.solace-background-control .components-color-picker__inputs-wrapper .components-base-control__label {
+  margin: 0;
+}
+.solace-background-control .control--top-toolbar .solace-background-type-control button.components-button,
+.solace-background-control .control--top-toolbar .solace-background-type-control button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.solace-background-control .remove-image {
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+.solace-background-control .remove-image:hover {
+  text-decoration: underline;
+}
+.solace-background-control .control--body {
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: #fff;
+  border-top: none;
+  padding: 10px;
+}
+.solace-background-control .control--body label {
+  display: block;
+  margin: 20px 0 10px;
+  font-weight: 500;
+}
+.solace-background-control .control--body .components-focal-point-picker-wrapper {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #ededed;
+}
+.solace-background-control input.components-range-control__number {
+  width: 20%;
+  margin-left: 20px;
+}
+.solace-background-control .components-placeholder {
+  width: auto;
+  min-height: 150px;
+  border-radius: 3px;
+  background-color: #ededed;
+  border: 1px solid #e2e4e7;
+}
+.solace-background-control .components-focal-point-picker_position-display-container {
+  margin: 0;
+}
+.solace-background-control .components-focal-point-picker_position-display-container .components-base-control {
+  margin-bottom: 0;
+  width: 50%;
+}
+.solace-background-control .components-focal-point-picker_position-display-container .components-base-control .components-base-control__field {
+  margin: 0;
+}
+.solace-background-control .components-focal-point-picker_position-display-container label {
+  margin-top: 10px;
+}
+.solace-background-control .components-toggle-control__label {
+  margin: 0 !important;
+}
+.solace-background-control .components-toggle-control {
+  margin: 20px 0 25px;
+}
+
+.solace-background-type-control {
+  width: 100%;
+  border: none;
+}
+.solace-background-type-control button {
+  width: 50%;
+  justify-content: center;
+  box-shadow: none !important;
+  border: 1px solid #555d66 !important;
+  color: #555d66 !important;
+  border-color: #555d66;
+  background-color: #fff;
+}
+.solace-background-type-control button.is-primary, .solace-background-type-control button:active, .solace-background-type-control button:focus {
+  background-color: #555d66 !important;
+  color: #fff !important;
+  border-color: #555d66 !important;
+  box-shadow: none !important;
+}
+
+.solace-button-appearance-control .solace-color-component .customize-control-title {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.solace-button-appearance-control .solace-responsive-sizing {
+  margin-bottom: 10px;
+}
+.solace-button-appearance-control .solace-responsive-sizing .dashicon {
+  margin: 0;
+}
+.solace-button-appearance-control .solace-white-background-control {
+  padding-bottom: 0;
+}
+.solace-button-appearance-control .components-panel {
+  margin: 0 -16px -1px;
+}
+.solace-button-appearance-control .components-panel__arrow {
+  width: 24px;
+  height: 24px;
+}
+.solace-button-appearance-control .components-panel__row {
+  margin-top: 10px;
+  display: block;
+}
+.solace-button-appearance-control .solace-radio-icons {
+  padding: 0;
+}
+.solace-button-appearance-control .solace-radio-icons button {
+  height: 30px;
+}
+.solace-button-appearance-control .solace-radio-icons button.is-text {
+  font-weight: 700;
+  color: #555d66;
+}
+.solace-button-appearance-control .solace-radio-icons button svg {
+  height: 20px;
+  width: 55px;
+}
+.solace-button-appearance-control .solace-radio-icons button .button-filled-svg path {
+  fill: #fff;
+}
+.solace-button-appearance-control .solace-radio-icons button .button-outline-svg rect {
+  fill: none;
+  stroke: #555d66;
+  stroke-miterlimit: 10;
+}
+.solace-button-appearance-control .solace-radio-icons button.active .button-filled-svg path {
+  fill: #555d66;
+}
+.solace-button-appearance-control .solace-radio-icons button.active .button-outline-svg rect {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+.solace-color-component {
+  margin: 0;
+  align-items: center;
+  /*	.components-tooltip {
+  		display: none !important;
+  	}*/
+}
+.solace-color-component .delete {
+  margin-left: auto;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+.solace-color-component .delete:hover {
+  color: #037FB8;
+}
+.solace-color-component .delete + div {
+  margin-left: 0;
+}
+.solace-color-component .clear {
+  width: 100%;
+  justify-content: center;
+  border-radius: 0;
+}
+.solace-color-component > div {
+  margin-left: auto;
+}
+.solace-color-component > div > button {
+  height: 30px;
+  width: 55px;
+  display: block;
+  border: 1px solid #ccc !important;
+  position: relative;
+}
+.solace-color-component > div > button .color, .solace-color-component > div > button .gradient {
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+.solace-color-component > div > button .color {
+  z-index: 1;
+}
+.solace-color-component > div > button .gradient {
+  background-image: linear-gradient(45deg, #fff 0%, #ccc 0%, #ccc 10%, #fff 10%, #fff 20%, #ccc 20%, #ccc 30%, #fff 30%, #fff 40%, #ccc 40%, #ccc 50%, #fff 50%, #fff 60%, #ccc 60%, #ccc 70%, #fff 70%, #fff 80%, #ccc 80%, #ccc 90%, #fff 90%, #fff 100%, #ccc 100%) !important;
+}
+.solace-color-component input {
+  border-color: #ccc;
+  border-radius: 0;
+  height: 30px;
+  padding: 0 10px;
+}
+.solace-color-component .components-color-picker__body {
+  padding: 10px;
+}
+.solace-color-component .components-color-picker__inputs-field {
+  margin-bottom: 0 !important;
+}
+.solace-color-component .components-color-picker__inputs-wrapper {
+  padding-top: 10px;
+}
+.solace-color-component .components-color-picker__inputs-toggle button {
+  height: 30px !important;
+  padding: 0 5px;
+  border-radius: 0;
+}
+.solace-color-component.allows-global > div:last-child {
+  margin-left: 0;
+}
+.solace-color-component.allows-global > div > button {
+  width: 27px !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b7c0cc;
+  box-shadow: none;
+}
+.solace-color-component.allows-global > div > button > .dashicons {
+  width: 10px;
+}
+.solace-color-component.allows-global .global-color-picker {
+  color: #b7c0cc;
+  margin-right: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.solace-color-component.allows-global .global-color-picker:hover {
+  color: #b7c0cc;
+}
+.solace-color-component.allows-global .global-color-picker.active {
+  color: #037FB8;
+}
+
+.wp-editor-wrap .wp-editor-tools .wp-media-buttons button {
+  line-height: 2.15384615;
+  min-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  background: #f6f7f7;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.wp-editor-wrap .wp-editor-tools .wp-editor-tabs button {
+  margin-top: 0;
+}
+
+.solace-rich-text .components-button.has-icon {
+  color: #f6f7f7;
+}
+
+.nv-custom-palette-wrap .header {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 20px;
+}
+.nv-custom-palette-wrap .header .customize-control-title {
+  color: #555D66;
+}
+.nv-custom-palette-wrap .header .edit-gc-link {
+  margin-left: auto;
+  text-decoration: none;
+}
+.nv-custom-palette-wrap ul li {
+  white-space: nowrap;
+  padding: 2px 0;
+}
+.nv-custom-palette-wrap ul a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #555D66;
+  font-weight: 500;
+  font-size: 14px;
+}
+.nv-custom-palette-wrap ul a span {
+  margin-left: 7px;
+}
+.nv-custom-palette-wrap .nv-custom-palette-color {
+  height: 30px;
+  width: 30px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 2px;
+}
+.nv-custom-palette-wrap .nv-custom-palette-color.active {
+  margin: 0;
+  border: 3px solid #8FD7EE;
+}
+
+.globa-color-popover {
+  border-radius: 100px !important;
+}
+
+.solace-color-component.allows-global .components-popover__content {
+  border: none;
+  border-radius: 5px !important;
+  overflow: auto !important;
+  max-height: -moz-max-content !important;
+  max-height: max-content !important;
+}
+
+.global-color-picker .dashicon {
+  width: auto !important;
+  font-size: 16px !important;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  margin-right: 0 !important;
+}
+.global-color-picker svg {
+  margin-right: 0 !important;
+}
+.global-color-picker.active {
+  color: #037FB8;
+}
+
+.customize-control .solace-color-component .components-popover {
+  position: fixed !important;
+  max-height: 430px;
+}
+.customize-control .solace-color-component .components-popover .components-custom-gradient-picker__inserter {
+  z-index: 1;
+}
+.customize-control .solace-color-component .components-popover .components-popover {
+  position: absolute !important;
+}
+.customize-control .solace-color-component .components-popover .components-popover__content {
+  overflow: auto !important;
+  max-height: inherit !important;
+}
+.customize-control .solace-color-component .components-custom-gradient-picker__gradient-bar {
+  position: relative;
+  border-radius: 24px;
+  z-index: 1;
+}
+.customize-control .solace-color-component .components-custom-gradient-picker__gradient-bar:not(.has-gradient) {
+  opacity: 1;
+}
+
+.customize-control .solace-color-component button.border-mycolor + .components-popover {
+  max-height: 576.812px !important;
+}
+
+/*
+ * Style fixes for color picker inside mega-menu.
+ */
+#nv-mm-app .modal .components-popover {
+  max-height: 430px;
+}
+#nv-mm-app .modal .components-color-picker .components-select-control .components-input-control__container {
+  max-width: 100%;
+}
+
+.select-inline {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.select-inline > .customize-control-title {
+  margin: 0;
+  max-width: 35%;
+}
+.select-inline > * {
+  flex-grow: 1;
+}
+.select-inline select {
+  border-radius: 0;
+  border-color: #ccc;
+}
+.select-inline .components-base-control__field {
+  margin: 0;
+}
+
+.solace-multiselect .multiselect-wrap {
+  border: 1px solid #ccc;
+  display: flex;
+}
+.solace-multiselect .multiselect-wrap .selected-options {
+  padding: 0 0 3px 3px;
+  border-radius: 2px;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 30px;
+}
+.solace-multiselect .token {
+  margin: 3px 3px 0 0 !important;
+  display: flex;
+  background: #ededed;
+  align-items: center;
+  padding: 3px 8px 3px 5px !important;
+  height: auto;
+}
+.solace-multiselect .token .title {
+  color: #555d66;
+  font-size: 14px;
+}
+.solace-multiselect .token svg {
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.solace-multiselect .dd-toggle {
+  display: flex;
+  align-items: center;
+  margin: -1px;
+}
+.solace-multiselect .dd-toggle button {
+  height: 100%;
+}
+
+.solace-radio-icons {
+  display: flex;
+  padding: 3px;
+}
+.solace-radio-icons span {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.solace-radio-icons label {
+  text-align: center;
+  font-weight: 800;
+  font-size: 9px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #555d66;
+  margin-top: 7px;
+}
+.solace-radio-icons > span:not(:first-child) {
+  margin-left: -1px;
+}
+.solace-radio-icons button {
+  align-items: center;
+  justify-content: center !important;
+  flex: 1;
+  padding: 3px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  margin-left: -1px;
+}
+.solace-radio-icons button:first-child {
+  margin-left: 0;
+}
+.solace-radio-icons button svg, .solace-radio-icons button .dashicon {
+  width: 20px;
+  margin: 0 auto !important;
+}
+.solace-radio-icons button.active, .solace-radio-icons button.active:hover {
+  background: var(--sol-customizer-panel-bg-color) !important;
+  border-color: #555d66 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.solace-radio-icons.large-buttons button {
+  height: 45px !important;
+}
+.solace-radio-icons.large-buttons button svg {
+  width: 40px;
+  height: 30px;
+}
+
+.solace-radio-icons-custom-svg {
+  overflow: hidden;
+  animation: 0.3s appear ease-out;
+  padding: 3px;
+}
+.solace-radio-icons-custom-svg .custom-svg-buttons {
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+
+@keyframes appear {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 300px;
+  }
+}
+.solace-radio-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.solace-radio-image .option {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 3px;
+  box-sizing: border-box;
+  width: 33.33%;
+}
+.solace-radio-image .option label {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  margin: 0 auto;
+}
+.solace-radio-image .option label span {
+  display: block;
+  margin-top: 5px;
+  display: none;
+}
+.solace-radio-image .option label button::after {
+  content: none;
+}
+.solace-radio-image .option label:hover span {
+  display: block;
+  font-size: 15px;
+}
+.solace-radio-image button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: 0;
+}
+.solace-radio-image button.active {
+  outline: 2px solid #037FB8;
+}
+.solace-radio-image button:hover {
+  filter: saturate(3);
+}
+.solace-radio-image button img {
+  display: block;
+  margin: 0 auto;
+}
+
+.solace-responsive-control-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+}
+.solace-responsive-control-bar .customize-control-title {
+  margin: 0;
+}
+.solace-responsive-control-bar .components-button-group {
+  display: flex;
+  border: none;
+}
+.solace-responsive-control-bar button {
+  height: auto;
+  box-shadow: none !important;
+  padding: 3px 4px !important;
+  min-width: unset !important;
+}
+.solace-responsive-control-bar button svg, .solace-responsive-control-bar button .dashicon {
+  color: #86909b;
+  height: 15px;
+  width: 16px;
+  font-size: 15px;
+}
+
+.preview-tablet .solace-responsive-control-bar button.tablet .dashicon {
+  color: black;
+}
+
+.preview-mobile .solace-responsive-control-bar button.mobile .dashicon {
+  color: black;
+}
+
+.preview-desktop .solace-responsive-control-bar button.desktop .dashicon {
+  color: black;
+}
+
+.solace-responsive-sizing {
+  display: flex;
+}
+.solace-responsive-sizing > button {
+  width: 35px !important;
+}
+.solace-responsive-sizing .nv-sizing-item {
+  flex-grow: 1;
+  margin-left: -1px;
+}
+.solace-responsive-sizing .nv-sizing-item > input {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  padding-right: 0;
+  position: relative;
+}
+.solace-responsive-sizing .nv-sizing-item > input:focus {
+  z-index: 10;
+}
+.solace-responsive-sizing button {
+  border-radius: 0;
+  height: 30px;
+  padding: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.solace-responsive-sizing button:hover {
+  box-shadow: none !important;
+}
+.solace-responsive-sizing button.link {
+  justify-content: center !important;
+  border: 1px solid #ccc !important;
+  padding: 0;
+  min-height: 32px;
+  position: relative;
+  bottom: 1px;
+}
+.solace-responsive-sizing button.active, .solace-responsive-sizing button.active:hover, .solace-responsive-sizing button.active:focus:enabled {
+  box-shadow: none !important;
+  outline: none !important;
+  background: #555d66 !important;
+  border-color: #555d66 !important;
+  color: #fff !important;
+}
+.solace-responsive-sizing button svg {
+  margin-right: 0 !important;
+  width: 17px;
+}
+.solace-responsive-sizing label {
+  text-transform: uppercase;
+  font-size: 9px;
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  color: #555d66;
+}
+.solace-responsive-sizing.single-input input {
+  width: 100%;
+}
+
+.solace-units {
+  margin-left: auto;
+  display: flex;
+}
+.solace-units button.components-button {
+  border: none;
+  color: #555d66;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 10px;
+  background: none;
+  padding: 2px 3px;
+  line-height: 10px;
+  height: auto;
+  border-radius: 2px;
+  min-width: 20px;
+  margin-left: 3px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.solace-units button.components-button.active {
+  background: #555d66;
+  color: #fff;
+}
+.solace-units button.components-button.active.alone {
+  background-color: #9c9c9c;
+  text-shadow: none;
+}
+
+/*# sourceMappingURL=style-components.css.map*/

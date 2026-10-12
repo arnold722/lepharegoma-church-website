@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "shadow": {
+			"defaultPresets": true,
+			"presets": [
+				{
+					"name": "Natural",
+					"slug": "natural",
+					"shadow": "0px 0px 24px 0px rgba(0,0,0,.1)"
+				},
+				{
+					"name": "Deep",
+					"slug": "deep",
+					"shadow": "12px 10px 40px rgba(0, 0, 0, 0.3)"
+				},
+				{
+					"name": "Sharp",
+					"slug": "sharp",
+					"shadow": "6px 6px 0px rgba(0, 0, 0, 0.2)"
+				},
+				{
+					"name": "Outlined",
+					"slug": "outlined",
+					"shadow": "6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1)"
+				},
+				{
+					"name": "Crisp",
+					"slug": "crisp",
+					"shadow": "6px 6px 0px rgba(0, 0, 0, 1)"
+				}
+			]
+		},
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    },
+    "color": {
+      "custom": true,
+      "link": true
+    },
+    "typography": {
+      "customFontSize": true,
+      "lineHeight": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "'DM Sans', sans-serif",
+          "slug": "dm-sans",
+          "name": "DM Sans",
+          "fontFace": [
+            {
+              "fontFamily": "'DM Sans'",
+              "fontStyle": "normal",
+              "fontWeight": "100 900",
+              "src": ["https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"]
+            }
+          ]
+        }
+      ]
+    },
+    "spacing": {
+      "defaultSpacingSizes": false,
+      "margin": true,
+      "padding": true,
+      "units": [ "%", "px", "em", "rem", "vh", "vw" ]
+    }
+  }
+}

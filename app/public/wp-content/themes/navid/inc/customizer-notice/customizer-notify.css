@@ -1,0 +1,194 @@
+/**
+ * Navid Customizer Notify Section Styles - Clean & Minimal
+ */
+
+/* Hide WordPress Customizer publish success notification */
+#customize-controls #customize-notifications-area .notice.notice-success,
+#customize-controls .notice.save-notice {
+    display: none !important;
+}
+
+/* Main notify section */
+.control-section-navid-notify-section {
+    margin: 0 !important;
+    border-bottom: 1px solid #e0e0e0;
+    background: #f9f9f9;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+}
+
+.control-section-navid-notify-section .accordion-section-title {
+    background: #f9f9f9;
+    color: #333;
+    border: none;
+    padding: 20px;
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: default;
+}
+
+/* Button container */
+.navid-customizer-notify-buttons {
+    display: flex;
+    /* gap: 10px; */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-section-navid-notify-section .accordion-section-title:hover,
+.control-section-navid-notify-section .accordion-section-title:focus {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.control-section-navid-notify-section .accordion-section-title:after {
+    display: none !important;
+}
+
+/* Title styling - Centered */
+.navid-customizer-notify-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Pro button - Red like Shopire */
+.navid-customizer-notify-pro-btn {
+    background: #5f7456 !important;
+    border: none;
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 8px 16px !important;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    white-space: nowrap;
+    display: inline-block;
+
+}
+
+.navid-customizer-notify-pro-btn:hover,
+.navid-customizer-notify-pro-btn:focus {
+    background: #42523b !important;
+    border-color: #42523b !important;
+    color: #fff !important;
+}
+
+/* Demo button - Green like Shopire */
+.navid-customizer-notify-demo-btn {
+    background: #8baa7a !important;
+    border: none;
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 8px 16px !important;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.navid-customizer-notify-demo-btn:hover,
+.navid-customizer-notify-demo-btn:focus {
+    background: #42523b !important;
+    border-color: #42523b !important;
+    color: #fff !important;
+}
+
+/* Help link - Simple like Shopire */
+.navid-customizer-notify-help-btn {
+    border: none;
+    color: #313134 !important;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px 16px !important;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    white-space: nowrap;
+    display: inline-block;
+    background: #e5e7eb;
+
+}
+
+.navid-customizer-notify-help-btn:hover {
+    text-decoration: none !important;
+    background: #c3c4c7 !important;
+    color: #313134 !important;
+}
+
+.navid-customizer-notify-help-btn:hover,
+.navid-customizer-notify-help-btn:focus {
+    color: #333 !important;
+    text-decoration: underline;
+}
+
+/* Hide ALL possible arrow/expand icons - Comprehensive */
+#accordion-section-navid-customizer-notify-section .accordion-section-title:after,
+.control-section-navid-notify-section .accordion-section-title:after,
+li#accordion-section-navid-customizer-notify-section .accordion-section-title:after,
+.accordion-section.control-section-navid-notify-section .accordion-section-title:after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Hide toggle indicators */
+#accordion-section-navid-customizer-notify-section .accordion-section-title .toggle-indicator:before,
+.control-section-navid-notify-section .accordion-section-title .toggle-indicator:before,
+#accordion-section-navid-customizer-notify-section .toggle-indicator,
+.control-section-navid-notify-section .toggle-indicator {
+    display: none !important;
+}
+
+/* Prevent any cursor pointer behavior */
+#accordion-section-navid-customizer-notify-section .accordion-section-title,
+.control-section-navid-notify-section .accordion-section-title {
+    cursor: default !important;
+    pointer-events: none;
+}
+
+/* Allow clicks on buttons only */
+.navid-customizer-notify-demo-btn,
+.navid-customizer-notify-pro-btn,
+.navid-customizer-notify-help-btn {
+    pointer-events: auto !important;
+}
+
+/* Responsive design - Clean */
+@media (max-width: 782px) {
+    .control-section-navid-notify-section .accordion-section-title {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 15px 20px;
+    }
+
+    .navid-customizer-notify-section-title {
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    .navid-customizer-notify-pro-btn,
+    .navid-customizer-notify-demo-btn,
+    .navid-customizer-notify-help-btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6px;
+        justify-content: center;
+    }
+}

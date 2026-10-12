@@ -1,0 +1,113 @@
+/*==============================================================
+TABLE OF CONTENTS:
+================================================================
+Radio_Image
+==============================================================*/
+:root {
+  /* Typography */
+  --sol-customizer--font-family: "Poppins", sans-serif;
+  --sol-customizer--font-family-secondary: "Poppins", sans-serif;
+  --sol-customizer--font-weight-section: 400;
+  --sol-customizer--font-size-section: 16px;
+  --sol-customizer--font-weight-panel: 700;
+  --sol-customizer--font-size-panel: 18px;
+  /* Colors */
+  --sol-customizer-bg-color: inherit;
+  --sol-customizer-panel-bg-color: inherit;
+  --sol-customizer-text-color: inherit;
+  --sol-customizer-icon-color: inherit;
+  --sol-customizer-border-color: inherit;
+  --sol-customizer-contrast-color: inherit;
+}
+
+:root .sol-dark-mode {
+  --sol-customizer-bg-color: #001644;
+  --sol-customizer-panel-bg-color: #0f2e5f;
+  --sol-customizer-text-color: #FFFFFF;
+  --sol-customizer-link-color: #FA9002;
+  --sol-customizer-icon-color: #FA9002;
+  --sol-customizer-border-color: #072251;
+  --sol-customizer-line-color: #0E305F;
+  --sol-customizer-contrast-color: #ffffff;
+  --sol-customizer-button-color: #FA9002;
+  --sol-customizer-button-color-darker: darken(#FA9002, 10%);
+  --sol-builder-row-tab-color: #476698;
+  --sol-builder-active-color: #FD9507;
+  --sol-builder-bg-color: #0F2E5F;
+  --sol-builder-header-bg-color: #0F3877;
+  --sol-builder-element-color: #0F2E5F;
+}
+
+:root .sol-light-mode {
+  --sol-customizer-bg-color: #f8f8f8;
+  --sol-customizer-panel-bg-color: #f8f8f8;
+  --sol-customizer-text-color: #001B44;
+  --sol-customizer-link-color: #FA9002;
+  --sol-customizer-icon-color: #FA9002;
+  --sol-customizer-border-color: #f8f8f8;
+  --sol-customizer-line-color: #f8f8f8;
+  --sol-customizer-contrast-color: #000000;
+  --sol-customizer-button-color: #FA9002;
+  --sol-customizer-button-color-darker: darken(#FA9002, 10%);
+  --sol-builder-row-tab-color: #476698;
+  --sol-builder-active-color: #FD9507;
+  --sol-builder-bg-color: #0F2E5F;
+  --sol-builder-header-bg-color: #0F3877;
+  --sol-builder-element-color: #0F2E5F;
+}
+
+/*==============================================================
+Radio_Image
+==============================================================*/
+li.customize-control.customize-control-solace_radio_image_control .solace-radio-image {
+  gap: 5px;
+  justify-content: space-around;
+}
+
+li.customize-control.customize-control-solace_radio_image_control .solace-radio-image .option {
+  background-color: transparent;
+  width: 125px;
+  height: 155px;
+  border-radius: 20px;
+  position: relative;
+}
+
+li.customize-control.customize-control-solace_radio_image_control .solace-radio-image .option button {
+  position: relative;
+  background-color: transparent;
+  border-radius: 14px;
+  width: 125px !important;
+  height: 128px !important;
+}
+
+li.customize-control.customize-control-solace_radio_image_control .solace-radio-image .option button img {
+  border-radius: 10px;
+}
+
+li.customize-control.customize-control-solace_radio_image_control .solace-radio-image .option button.active {
+  position: relative;
+  border: 2px solid #ff9400;
+  outline: transparent;
+}
+
+li.customize-control.customize-control-solace_radio_image_control .solace-radio-image .option button.active::before {
+  display: block;
+  border: none;
+}
+
+li.customize-control.customize-control-solace_radio_image_control .solace-radio-image .option button.active::after {
+  content: "";
+  display: block;
+  background-image: url("../img/customizer/ok-sign.svg");
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  width: 21px;
+  height: 21px;
+  z-index: 9;
+  background-repeat: no-repeat;
+  background-color: #000;
+  border-radius: 50px;
+}
+
+/*# sourceMappingURL=solace-control-style.css.map */

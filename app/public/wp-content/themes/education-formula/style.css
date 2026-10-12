@@ -1,0 +1,80 @@
+/*
+Theme Name: Education Formula
+Theme URI: https://awplife.com/wordpress-themes/formula-premium/
+Template: formula
+Author: A WP Life
+Author URI: http://awplife.com/
+Description: The Education Formula WordPress theme is a professional and modern website template designed specifically for education and university related websites. It features a clean and responsive design with a focus on usability and accessibility. This theme seamlessly integrates with popular WordPress builders and block plugins, including Beaver, Divi, Visual Composer, SiteOrigin, Brizy, Themify, WPBakery, Gutenberg, Kadence blocks, Atomic blocks, and EditorsKit. With its lightweight design, this theme has a elegant menu like twenty twenty theme, this theme provide other category including blogs, storefront, portfolios, trending news portals, mega and dark theme, architecture and interior design sites, furniture and home decor websites, construction and corporate pages, agencies, business press promotion platforms, industries, beauty and spa salons, photography websites, gyms, fitness, yoga exercise and health pages, education websites, cooming soon and startups, business agencies, law firms, room hotels and travel websites, kids school, education and university portals, restaurants, popular meta shops, quick magazines, finance and accounting pages, consulting platforms, and travel agency websites and many more. Experience the captivating power of Spectral Briteful Lightning theme, guiding you through the digital landscape and ensuring you never go astray.
+Tags: blog, e-commerce, education, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, block-patterns, block-styles, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, rtl-language-support, theme-options, threaded-comments, translation-ready
+Version: 0.0.6
+Tested up to: 6.8
+Requires PHP: 5.4
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl.html
+Text Domain: education-formula
+*/
+
+/*--------------------------------------------------------------
+# Index
+--------------------------------------------------------------*/
+
+body.theme-dark #section.site-content .blog .full-content {
+    background-color: var(--thm-black-rgb);
+}
+
+.theme-dark .comment-section {
+    background-color: var(--thm-black-rgb);
+}
+
+.theme-dark .comment-form-section {
+    padding: 10px 20px 10px;
+    background-color: var(--thm-black-rgb);
+}
+
+.blog .full-content {
+    margin-left: 0px !important;
+    padding: 10px 20px 10px !important;
+    background-color : var(--thm-light);
+}
+.sidebar .widget {
+    background-color : var(--thm-light);
+}
+
+.blog .entry-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.comment-section {
+    padding: 10px 20px 10px;
+    background-color : var(--thm-light);
+}
+
+.blog .entry-content a .wp-block-button__link {
+    color: var(--thm-base);
+}
+.blog .entry-content a{
+    color: var(--thm-primary);
+}
+.blog .entry-content a:hover,
+.blog .entry-content a:focus {
+    color: var(--thm-primary-rgb);
+}
+
+.more-link:before{
+    display: none;
+}
+.blog .entry-content .more-link {
+    color: #ffffff;
+    background: black;
+    padding: 5px 15px;
+}
+.blog .entry-content .more-link:focus,
+.blog .entry-content .more-link:hover {
+    color: var(--thm-base);
+    background: var(--thm-primary);
+}
+.comment-form-section .thm-btn:focus {
+    background: var(--thm-black);
+    color: var(--thm-base);
+}
